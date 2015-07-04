@@ -23777,19 +23777,23 @@
 	        { className: "cover--ollantaytambo" },
 	        _react2["default"].createElement(
 	          "div",
-	          { className: "grid grid--center" },
+	          { className: "u-pt++" },
 	          _react2["default"].createElement(
 	            "div",
-	            { className: "grid__item one-half" },
-	            "Hi there! I am"
-	          ),
-	          _react2["default"].createElement(
-	            "div",
-	            { className: "grid__item one-whole" },
+	            { className: "layout layout--center" },
 	            _react2["default"].createElement(
-	              "h1",
-	              { className: "text--center u-pt++ u-m0" },
-	              "Matt Goo"
+	              "div",
+	              { className: "layout__item u-1/2" },
+	              "Hi there! I am"
+	            ),
+	            _react2["default"].createElement(
+	              "div",
+	              { className: "layout__item u-1/2" },
+	              _react2["default"].createElement(
+	                "h1",
+	                { className: "u-m0" },
+	                "Matt Goo"
+	              )
 	            )
 	          )
 	        )
