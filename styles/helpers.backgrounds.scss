@@ -1,8 +1,18 @@
 div[class^="cover--"] {
   background-size: cover;
-  min-height: 600px;
+  height: 800px;
+  @include media-query(palm) {
+    width: 320px;
+  }
 }
 
-.cover--sand {
-  background-image: url('assets/images/sand.jpg');
+.cover--ollantaytambo {
+  background-image: url('assets/images/ollantaytambo.png');
+  h1 {
+    font-size: 6rem;
+  }
+  @include media-query(palm) {
+    height: 600px;
+    background-position: 750px;
+  }
 }

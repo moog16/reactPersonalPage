@@ -23708,9 +23708,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TopPage = __webpack_require__(200);
+	var _SplashPage = __webpack_require__(200);
 
-	var _TopPage2 = _interopRequireDefault(_TopPage);
+	var _SplashPage2 = _interopRequireDefault(_SplashPage);
 
 	var Home = (function (_React$Component) {
 	  function Home() {
@@ -23724,7 +23724,7 @@
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement(_TopPage2['default'], null);
+	      return _react2['default'].createElement(_SplashPage2['default'], null);
 	    }
 	  }]);
 
@@ -23760,36 +23760,49 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var TopPage = (function (_React$Component) {
-	  function TopPage() {
-	    _classCallCheck(this, TopPage);
+	var SplashPage = (function (_React$Component) {
+	  function SplashPage() {
+	    _classCallCheck(this, SplashPage);
 
-	    _get(Object.getPrototypeOf(TopPage.prototype), "constructor", this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(SplashPage.prototype), "constructor", this).apply(this, arguments);
 	  }
 
-	  _inherits(TopPage, _React$Component);
+	  _inherits(SplashPage, _React$Component);
 
-	  _createClass(TopPage, [{
+	  _createClass(SplashPage, [{
 	    key: "render",
 	    value: function render() {
 	      return _react2["default"].createElement(
 	        "div",
-	        { className: "cover--sand" },
+	        { className: "cover--ollantaytambo" },
 	        _react2["default"].createElement(
-	          "h1",
-	          { className: "text--center u-pt++ u-m0" },
-	          "Matt Goo"
+	          "div",
+	          { className: "grid grid--center" },
+	          _react2["default"].createElement(
+	            "div",
+	            { className: "grid__item one-half" },
+	            "Hi there! I am"
+	          ),
+	          _react2["default"].createElement(
+	            "div",
+	            { className: "grid__item one-whole" },
+	            _react2["default"].createElement(
+	              "h1",
+	              { className: "text--center u-pt++ u-m0" },
+	              "Matt Goo"
+	            )
+	          )
 	        )
 	      );
 	    }
 	  }]);
 
-	  return TopPage;
+	  return SplashPage;
 	})(_react2["default"].Component);
 
 	;
 
-	exports["default"] = TopPage;
+	exports["default"] = SplashPage;
 	module.exports = exports["default"];
 
 /***/ }

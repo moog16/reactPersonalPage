@@ -11,7 +11,10 @@
 
 @import "../bower_components/inuit-layout/objects.layout";
 @import "../bower_components/inuit-spacing/trumps.spacing";
+@import "../bower_components/inuit-headings/base.headings";
 @import "../bower_components/inuit-headings-trumps/trumps.headings";
+@import "../bower_components/inuit-responsive-settings/settings.responsive";
+@import "../bower_components/inuit-responsive-tools/tools.responsive";
 
 // custom styles
 @import "layout.scss";

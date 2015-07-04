@@ -1,10 +1,10 @@
 import React from 'react';
-import TopPage from './TopPage';
+import SplashPage from './SplashPage';
 
 class Home extends React.Component {
   render() {
     return  (
-      <TopPage />
+      <SplashPage />
     )
   }
 };
