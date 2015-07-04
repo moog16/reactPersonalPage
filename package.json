@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "inuit-layout": "^0.2.2",
+    "inuit-responsive-spacing": "0.0.7",
+    "inuit-spacing": "^0.7.0",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babel-core": "^5.6.15",
     "babel-loader": "^5.3.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-react": "^0.12.2",
+    "grunt-webpack": "^1.0.11",
     "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.1"
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
