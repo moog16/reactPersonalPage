@@ -1,0 +1,8 @@
+div[class^="cover--"] {
+  background-size: cover;
+  min-height: 600px;
+}
+
+.cover--sand {
+  background-image: url('assets/images/sand.jpg');
+}

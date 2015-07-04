@@ -1,0 +1,21 @@
+{
+  "name": "react-matt",
+  "version": "0.0.0",
+  "authors": [
+    "Matt Goo <mattgoo@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-layout": "~0.3.2",
+    "inuit-spacing": "~0.7.0",
+    "inuit-starter-kit": "~0.2.9",
+    "inuit-headings-trumps": "~0.1.3"
+  }
+}

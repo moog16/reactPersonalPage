@@ -15,10 +15,10 @@ module.exports = {
     },
     stats: {
       colors: true,
-      modules: true,
-      reasons: true
+      modules: false,
+      reasons: false
     },
-    progress: true,
-    keepalive: true
+    progress: false,
+    keepalive: false
   }
 };

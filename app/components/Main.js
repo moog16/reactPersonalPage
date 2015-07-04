@@ -1,15 +1,16 @@
 import React from 'react';
-var RouteHandler = require('react-router').RouteHandler;
+import Menu from './Menu';
+import {Router, RouteHandler} from 'react-router';
 
 class Main extends React.Component{
-  render(){
+  render() {
     return (
-      <div className="main-container ml+">
-        <h2>This is a header</h2>
+      <div className="main-container">
+        <Menu />
         <RouteHandler />
       </div>
     )
   }
 };
 
-module.exports = Main;
+export default Main;
