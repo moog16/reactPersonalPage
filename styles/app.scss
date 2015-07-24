@@ -19,10 +19,11 @@
 @import "../bower_components/inuit-widths/trumps.widths";
 
 // custom styles
+@import "settings.colors";
 @import "layout.scss";
 @import "helpers.backgrounds.scss";
 @import "helpers.text.scss";
 
 
 // fonts
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+// @import url(http://fonts.googleapis.com/css?family=Lobster);

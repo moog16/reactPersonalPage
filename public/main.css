@@ -10,7 +10,6 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Lobster);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1116,11 +1115,13 @@ h6 {
 .u-4\/5 {
   width: 80% !important; }
 
+html,
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive; }
+  font-family: 'DearAnnabelle'; }
 
 div[class^="cover--"] {
   background-size: cover;
@@ -1129,16 +1130,22 @@ div[class^="cover--"] {
     div[class^="cover--"] {
       width: 320px; } }
 
-.cover--ollantaytambo {
-  background-image: url("assets/images/ollantaytambo.png"); }
-  .cover--ollantaytambo h1 {
+.cover--foggy-northface {
+  background-image: url("assets/images/foggy_northface.png"); }
+  .cover--foggy-northface h1 {
     font-size: 6rem; }
   @media screen and (max-width: 44.9375em) {
-    .cover--ollantaytambo {
+    .cover--foggy-northface {
       height: 600px;
       background-position: 750px; } }
 
 .text--center {
   text-align: center; }
+
+.text--color--light {
+  color: white; }
+
+.text--large {
+  font-size: 3rem; }
 
 /*# sourceMappingURL=main.css.map */
