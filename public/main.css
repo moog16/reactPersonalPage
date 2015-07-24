@@ -1117,11 +1117,18 @@ h6 {
 
 html,
 body {
-  font-family: sans-serif;
+  font-family: 'Cocomat';
+  font-weight: 500;
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DearAnnabelle'; }
+
+.ib {
+  display: inline-block; }
+
+.inline {
+  display: inline; }
 
 div[class^="cover--"] {
   background-size: cover;

@@ -20,7 +20,8 @@
 
 // custom styles
 @import "settings.colors";
-@import "layout.scss";
+@import "base.layout.scss";
+@import "helpers.positioning.scss";
 @import "helpers.backgrounds.scss";
 @import "helpers.text.scss";
 
