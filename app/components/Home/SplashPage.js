@@ -7,7 +7,7 @@ class SplashPage extends React.Component {
         <div className="u-pt++">
           <div className="layout layout--center">
             <div className="layout__item u-1/2 text--color--light text--large text--center">
-              <span>Hi there! I am </span><h1 className="inline">matt goo</h1>
+              <div className="inline--desk text--center">Hi there! I am </div><h1 className="inline--desk text--center">matt goo</h1>
             </div>
           </div>
         </div>

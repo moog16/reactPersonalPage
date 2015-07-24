@@ -5,3 +5,9 @@
 .inline {
   display: inline;
 }
+
+.inline--desk {
+  @include media-query(desk) {
+    display: inline;
+  }
+}

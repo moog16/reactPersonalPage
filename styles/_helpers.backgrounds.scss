@@ -2,7 +2,6 @@ div[class^="cover--"] {
   background-size: cover;
   height: 800px;
   @include media-query(palm) {
-    width: 320px;
   }
 }
 
@@ -11,8 +10,17 @@ div[class^="cover--"] {
   h1 {
     font-size: 6rem;
   }
-  @include media-query(palm) {
+  @include media-query(lap) {
     height: 600px;
-    background-position: 750px;
+    background-position: -130px;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  @include media-query(palm) {
+    background-position: -250px;
+    h1 {
+      font-size: 3rem;
+    }
   }
 }

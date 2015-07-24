@@ -8,4 +8,7 @@
 
 .text--large {
   font-size: 3rem;
+  @include media-query(portable) {
+    font-size: 2rem;
+  };
 }

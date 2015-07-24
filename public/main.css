@@ -1130,21 +1130,29 @@ h1, h2, h3, h4, h5, h6 {
 .inline {
   display: inline; }
 
+@media screen and (min-width: 64em) {
+  .inline--desk {
+    display: inline; } }
+
 div[class^="cover--"] {
   background-size: cover;
   height: 800px; }
-  @media screen and (max-width: 44.9375em) {
-    div[class^="cover--"] {
-      width: 320px; } }
 
 .cover--foggy-northface {
   background-image: url("assets/images/foggy_northface.png"); }
   .cover--foggy-northface h1 {
     font-size: 6rem; }
-  @media screen and (max-width: 44.9375em) {
+  @media screen and (min-width: 45em) and (max-width: 63.9375em) {
     .cover--foggy-northface {
       height: 600px;
-      background-position: 750px; } }
+      background-position: -130px; }
+      .cover--foggy-northface h1 {
+        font-size: 4rem; } }
+  @media screen and (max-width: 44.9375em) {
+    .cover--foggy-northface {
+      background-position: -250px; }
+      .cover--foggy-northface h1 {
+        font-size: 3rem; } }
 
 .text--center {
   text-align: center; }
@@ -1154,5 +1162,8 @@ div[class^="cover--"] {
 
 .text--large {
   font-size: 3rem; }
+  @media screen and (max-width: 63.9375em) {
+    .text--large {
+      font-size: 2rem; } }
 
 /*# sourceMappingURL=main.css.map */
