@@ -10,27 +10,27 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-enable-responsive-margins:                   false !default;
-$inuit-enable-responsive-margins--tiny:             false !default;
-$inuit-enable-responsive-margins--small:            false !default;
-$inuit-enable-responsive-margins--large:            false !default;
-$inuit-enable-responsive-margins--huge:             false !default;
+$inuit-enable-responsive-margins:                   true !default;
+$inuit-enable-responsive-margins--tiny:             true !default;
+$inuit-enable-responsive-margins--small:            true !default;
+$inuit-enable-responsive-margins--large:            true !default;
+$inuit-enable-responsive-margins--huge:             true !default;
 
-$inuit-enable-responsive-margins--negative:         false !default;
-$inuit-enable-responsive-margins--negative-tiny:    false !default;
-$inuit-enable-responsive-margins--negative-small:   false !default;
-$inuit-enable-responsive-margins--negative-large:   false !default;
-$inuit-enable-responsive-margins--negative-huge:    false !default;
+$inuit-enable-responsive-margins--negative:         true !default;
+$inuit-enable-responsive-margins--negative-tiny:    true !default;
+$inuit-enable-responsive-margins--negative-small:   true !default;
+$inuit-enable-responsive-margins--negative-large:   true !default;
+$inuit-enable-responsive-margins--negative-huge:    true !default;
 
-$inuit-enable-responsive-margins--none:             false !default;
+$inuit-enable-responsive-margins--none:             true !default;
 
-$inuit-enable-responsive-paddings:                  false !default;
-$inuit-enable-responsive-paddings--tiny:            false !default;
-$inuit-enable-responsive-paddings--small:           false !default;
-$inuit-enable-responsive-paddings--large:           false !default;
-$inuit-enable-responsive-paddings--huge:            false !default;
+$inuit-enable-responsive-paddings:                  true !default;
+$inuit-enable-responsive-paddings--tiny:            true !default;
+$inuit-enable-responsive-paddings--small:           true !default;
+$inuit-enable-responsive-paddings--large:           true !default;
+$inuit-enable-responsive-paddings--huge:            true !default;
 
-$inuit-enable-responsive-paddings--none:            false !default;
+$inuit-enable-responsive-paddings--none:            true !default;
 
 
 
@@ -50,7 +50,7 @@ $inuit-enable-responsive-paddings--none:            false !default;
         // This isn’t ideal, but we definitely don’t want to generate widths
         // for retina devices. Exclude retina media-qeuries manually.
         @if ($inuit-generate-spacing-alias != "retina") {
-    
+
             @include media-query($inuit-generate-spacing-alias) {
                 @content;
             } // Close media query.
