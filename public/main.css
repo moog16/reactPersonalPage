@@ -618,6 +618,210 @@ html {
   width: 80% !important; }
 
 /*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsive width classes based on your responsive settings.
+ */
+@media screen and (max-width: 44.9375em) {
+  .u-1\/1-palm {
+    width: 100% !important; }
+
+  .u-1\/2-palm {
+    width: 50% !important; }
+
+  .u-1\/3-palm {
+    width: 33.33333% !important; }
+
+  .u-2\/3-palm {
+    width: 66.66667% !important; }
+
+  .u-1\/4-palm {
+    width: 25% !important; }
+
+  .u-2\/4-palm {
+    width: 50% !important; }
+
+  .u-3\/4-palm {
+    width: 75% !important; }
+
+  .u-1\/5-palm {
+    width: 20% !important; }
+
+  .u-2\/5-palm {
+    width: 40% !important; }
+
+  .u-3\/5-palm {
+    width: 60% !important; }
+
+  .u-4\/5-palm {
+    width: 80% !important; } }
+@media screen and (min-width: 45em) and (max-width: 63.9375em) {
+  .u-1\/1-lap {
+    width: 100% !important; }
+
+  .u-1\/2-lap {
+    width: 50% !important; }
+
+  .u-1\/3-lap {
+    width: 33.33333% !important; }
+
+  .u-2\/3-lap {
+    width: 66.66667% !important; }
+
+  .u-1\/4-lap {
+    width: 25% !important; }
+
+  .u-2\/4-lap {
+    width: 50% !important; }
+
+  .u-3\/4-lap {
+    width: 75% !important; }
+
+  .u-1\/5-lap {
+    width: 20% !important; }
+
+  .u-2\/5-lap {
+    width: 40% !important; }
+
+  .u-3\/5-lap {
+    width: 60% !important; }
+
+  .u-4\/5-lap {
+    width: 80% !important; } }
+@media screen and (min-width: 45em) {
+  .u-1\/1-lap-and-up {
+    width: 100% !important; }
+
+  .u-1\/2-lap-and-up {
+    width: 50% !important; }
+
+  .u-1\/3-lap-and-up {
+    width: 33.33333% !important; }
+
+  .u-2\/3-lap-and-up {
+    width: 66.66667% !important; }
+
+  .u-1\/4-lap-and-up {
+    width: 25% !important; }
+
+  .u-2\/4-lap-and-up {
+    width: 50% !important; }
+
+  .u-3\/4-lap-and-up {
+    width: 75% !important; }
+
+  .u-1\/5-lap-and-up {
+    width: 20% !important; }
+
+  .u-2\/5-lap-and-up {
+    width: 40% !important; }
+
+  .u-3\/5-lap-and-up {
+    width: 60% !important; }
+
+  .u-4\/5-lap-and-up {
+    width: 80% !important; } }
+@media screen and (max-width: 63.9375em) {
+  .u-1\/1-portable {
+    width: 100% !important; }
+
+  .u-1\/2-portable {
+    width: 50% !important; }
+
+  .u-1\/3-portable {
+    width: 33.33333% !important; }
+
+  .u-2\/3-portable {
+    width: 66.66667% !important; }
+
+  .u-1\/4-portable {
+    width: 25% !important; }
+
+  .u-2\/4-portable {
+    width: 50% !important; }
+
+  .u-3\/4-portable {
+    width: 75% !important; }
+
+  .u-1\/5-portable {
+    width: 20% !important; }
+
+  .u-2\/5-portable {
+    width: 40% !important; }
+
+  .u-3\/5-portable {
+    width: 60% !important; }
+
+  .u-4\/5-portable {
+    width: 80% !important; } }
+@media screen and (min-width: 64em) {
+  .u-1\/1-desk {
+    width: 100% !important; }
+
+  .u-1\/2-desk {
+    width: 50% !important; }
+
+  .u-1\/3-desk {
+    width: 33.33333% !important; }
+
+  .u-2\/3-desk {
+    width: 66.66667% !important; }
+
+  .u-1\/4-desk {
+    width: 25% !important; }
+
+  .u-2\/4-desk {
+    width: 50% !important; }
+
+  .u-3\/4-desk {
+    width: 75% !important; }
+
+  .u-1\/5-desk {
+    width: 20% !important; }
+
+  .u-2\/5-desk {
+    width: 40% !important; }
+
+  .u-3\/5-desk {
+    width: 60% !important; }
+
+  .u-4\/5-desk {
+    width: 80% !important; } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .u-1\/1-retina {
+    width: 100% !important; }
+
+  .u-1\/2-retina {
+    width: 50% !important; }
+
+  .u-1\/3-retina {
+    width: 33.33333% !important; }
+
+  .u-2\/3-retina {
+    width: 66.66667% !important; }
+
+  .u-1\/4-retina {
+    width: 25% !important; }
+
+  .u-2\/4-retina {
+    width: 50% !important; }
+
+  .u-3\/4-retina {
+    width: 75% !important; }
+
+  .u-1\/5-retina {
+    width: 20% !important; }
+
+  .u-2\/5-retina {
+    width: 40% !important; }
+
+  .u-3\/5-retina {
+    width: 60% !important; }
+
+  .u-4\/5-retina {
+    width: 80% !important; } }
+/*------------------------------------*\
     #SPACING
 \*------------------------------------*/
 /**
@@ -3151,15 +3355,6 @@ div[class^="cover--"] {
   -o-background-size: cover;
   background-size: cover;
   height: 100vh; }
-  div[class^="cover--"] .cover__vertical-center {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 25%; }
 
 .cover--fish {
   background-image: url("assets/images/fish.png"); }
@@ -3211,6 +3406,18 @@ div[class^="cover--"] {
 
 .full-page {
   min-height: 750px; }
+
+.page-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.page-center {
+  left: 25%; }
 
 .text--center {
   text-align: center !important; }

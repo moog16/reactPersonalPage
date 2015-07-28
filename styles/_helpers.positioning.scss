@@ -25,3 +25,12 @@
 .full-page {
   min-height: 750px;
 }
+
+%vertical-center {
+  @include vertical-align;
+}
+
+.page-center {
+  @extend %vertical-center;
+  left: 25%;
+}
