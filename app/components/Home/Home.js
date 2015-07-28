@@ -1,10 +1,14 @@
 import React from 'react';
 import SplashPage from './SplashPage';
+import Capture from '../Capture';
 
 class Home extends React.Component {
   render() {
     return  (
-      <SplashPage />
+      <div>
+        <SplashPage />
+        <Capture />
+      </div>
     )
   }
 };

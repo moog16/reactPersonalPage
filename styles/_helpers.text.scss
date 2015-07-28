@@ -2,8 +2,16 @@
   text-align: center !important;
 }
 
+.text--uppercase {
+  text-transform: uppercase;
+}
+
 .text--color--light {
   color: $text--color-white;
+}
+
+.text--color-dark-blue {
+  color: $text--color-dark-blue;
 }
 
 .text--large {
@@ -15,4 +23,13 @@
 
 .text--huge {
   font--size: 5rem;
+}
+
+.text--style-normal {
+  font-family: 'Cocomat';
+  font-weight: 500;
+}
+
+.text--style-header {
+  font-family: 'DearAnnabelle';
 }

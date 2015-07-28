@@ -3151,12 +3151,7 @@ div[class^="cover--"] {
   -o-background-size: cover;
   background-size: cover;
   height: 100vh; }
-
-.cover--fish {
-  background-image: url("assets/images/fish.png"); }
-  .cover--fish h1 {
-    margin-top: 0; }
-  .cover--fish .cover__header {
+  div[class^="cover--"] .cover__vertical-center {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -3165,6 +3160,9 @@ div[class^="cover--"] {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 25%; }
+
+.cover--fish {
+  background-image: url("assets/images/fish.png"); }
   @media screen and (max-width: 44.9375em) {
     .cover--fish {
       background-position: -100px; } }
@@ -3184,6 +3182,9 @@ div[class^="cover--"] {
       background-position: -250px; }
       .cover--foggy-northface h1 {
         font-size: 3rem; } }
+
+.bg--color-blue {
+  background-color: #17607D; }
 
 .border--main {
   border-color: white; }
@@ -3208,11 +3209,20 @@ div[class^="cover--"] {
   .inline--desk {
     display: inline; } }
 
+.full-page {
+  min-height: 750px; }
+
 .text--center {
   text-align: center !important; }
 
+.text--uppercase {
+  text-transform: uppercase; }
+
 .text--color--light {
   color: white; }
+
+.text--color-dark-blue {
+  color: #002A4A; }
 
 .text--large {
   font-size: 3rem; }
@@ -3222,5 +3232,12 @@ div[class^="cover--"] {
 
 .text--huge {
   font--size: 5rem; }
+
+.text--style-normal {
+  font-family: 'Cocomat';
+  font-weight: 500; }
+
+.text--style-header {
+  font-family: 'DearAnnabelle'; }
 
 /*# sourceMappingURL=main.css.map */

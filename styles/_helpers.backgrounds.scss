@@ -1,16 +1,13 @@
 div[class^="cover--"] {
   @include vendor(background-size, cover);
   height: 100vh;
-}
-.cover--fish {
-  background-image: url('assets/images/fish.png');
-  h1 {
-    margin-top: 0;
-  }
-  .cover__header {
+  .cover__vertical-center {
     @include vertical-align;
     left: 25%;
   }
+}
+.cover--fish {
+  background-image: url('assets/images/fish.png');
   @include media-query(palm) {
     background-position: -100px;
   }
@@ -34,4 +31,8 @@ div[class^="cover--"] {
       font-size: 3rem;
     }
   }
+}
+
+.bg--color-blue {
+  background-color: $blue;
 }
