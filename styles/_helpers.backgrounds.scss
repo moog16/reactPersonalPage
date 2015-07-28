@@ -1,7 +1,18 @@
 div[class^="cover--"] {
-  background-size: cover;
-  height: 800px;
+  @include vendor(background-size, cover);
+  height: 100vh;
+}
+.cover--fish {
+  background-image: url('assets/images/fish.png');
+  h1 {
+    margin-top: 0;
+  }
+  .cover__header {
+    @include vertical-align;
+    left: 25%;
+  }
   @include media-query(palm) {
+    background-position: -100px;
   }
 }
 
@@ -11,7 +22,7 @@ div[class^="cover--"] {
     font-size: 6rem;
   }
   @include media-query(lap) {
-    height: 600px;
+    min-height: 600px;
     background-position: -130px;
     h1 {
       font-size: 4rem;

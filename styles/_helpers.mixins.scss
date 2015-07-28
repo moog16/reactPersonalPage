@@ -1,0 +1,15 @@
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+/* Mixin */
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  @include vendor(transform, translateY(-50%));
+}

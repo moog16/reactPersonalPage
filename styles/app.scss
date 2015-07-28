@@ -1,29 +1,31 @@
 // framework styles
 @import "../bower_components/inuit-defaults/settings.defaults";
+@import "../bower_components/inuit-responsive-settings/settings.responsive";
 
 @import "../bower_components/inuit-functions/tools.functions";
 @import "../bower_components/inuit-mixins/tools.mixins";
+@import "../bower_components/inuit-responsive-tools/tools.responsive";
+@import "../bower_components/inuit-tools-widths/tools.widths";
+
+@import "../bower_components/inuit-page/base.page";
+@import "../bower_components/inuit-headings/base.headings";
 
 @import "../bower_components/inuit-normalize/generic.normalize";
 @import "../bower_components/inuit-box-sizing/generic.box-sizing";
 
-@import "../bower_components/inuit-page/base.page";
-
 @import "../bower_components/inuit-layout/objects.layout";
+@import "../bower_components/inuit-widths/trumps.widths";
 @import "../bower_components/inuit-spacing/trumps.spacing";
 @import "../bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
-@import "../bower_components/inuit-headings/base.headings";
 @import "../bower_components/inuit-headings-trumps/trumps.headings";
-@import "../bower_components/inuit-responsive-settings/settings.responsive";
-@import "../bower_components/inuit-responsive-tools/tools.responsive";
-@import "../bower_components/inuit-tools-widths/tools.widths";
-@import "../bower_components/inuit-widths/trumps.widths";
 
 // custom styles
 @import "settings.colors";
+@import "helpers.mixins";
 @import "base.layout.scss";
-@import "helpers.positioning.scss";
 @import "helpers.backgrounds.scss";
+@import "helpers.borders.scss";
+@import "helpers.positioning.scss";
 @import "helpers.text.scss";
 
 

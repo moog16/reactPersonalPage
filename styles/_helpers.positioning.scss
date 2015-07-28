@@ -1,9 +1,19 @@
+.relative {
+  position: relative;
+}
+
 .ib {
   display: inline-block;;
 }
 
 .inline {
   display: inline;
+}
+
+.ib--desk {
+  @include media-query(desk) {
+    display: inline-block;
+  }
 }
 
 .inline--desk {

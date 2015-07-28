@@ -1,9 +1,9 @@
 .text--center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text--color--light {
-  color: $text--color-light;
+  color: $text--color-white;
 }
 
 .text--large {
@@ -11,4 +11,8 @@
   @include media-query(portable) {
     font-size: 2rem;
   };
+}
+
+.text--huge {
+  font--size: 5rem;
 }
