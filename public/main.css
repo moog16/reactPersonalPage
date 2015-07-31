@@ -3407,7 +3407,7 @@ div[class^="cover--"] {
 .full-page {
   min-height: 750px; }
 
-.page-center {
+.page--center {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3416,8 +3416,11 @@ div[class^="cover--"] {
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.page-center {
+.page--center {
   left: 25%; }
+  @media screen and (max-width: 63.9375em) {
+    .page--center {
+      left: 0; } }
 
 .text--center {
   text-align: center !important; }

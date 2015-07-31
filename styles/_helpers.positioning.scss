@@ -30,7 +30,10 @@
   @include vertical-align;
 }
 
-.page-center {
+.page--center {
   @extend %vertical-center;
   left: 25%;
+  @include media-query(portable) {
+    left: 0;
+  }
 }
