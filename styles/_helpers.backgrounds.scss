@@ -35,6 +35,12 @@ div[class^="cover--"] {
   }
 }
 
+/******** generic background classes ********/
+
 .bg--color-blue {
   background-color: $blue;
+}
+
+.bg--color-red {
+  background-color: $red;
 }

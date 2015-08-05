@@ -26,12 +26,18 @@
   min-height: 750px;
 }
 
-%vertical-center {
+.vertical-center {
+  // in _helpers.mixin.scss
   @include vertical-align;
 }
 
+.page--center--left {
+  @extend .vertical-center;
+  left: 0;
+}
+
 .page--center {
-  @extend %vertical-center;
+  @extend .vertical-center;
   left: 25%;
 }
 

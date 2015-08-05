@@ -2,6 +2,7 @@ import React from 'react';
 import SplashPage from '../SplashPage';
 import Capture from '../Capture';
 import Statement from '../Statement';
+import AboutMe from '../AboutMe';
 
 class Home extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Home extends React.Component {
         <SplashPage />
         <Capture />
         <Statement />
+        <AboutMe />
       </div>
     )
   }

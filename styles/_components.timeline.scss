@@ -1,0 +1,8 @@
+.timeline {
+  height: 100%;
+  &::before {
+    content: '';
+    border: 1px dashed $light;
+    height: 100%;
+  }
+}

@@ -5156,14 +5156,23 @@ div[class^="cover--"] {
     .cover--foggy-northface {
       background-position-x: -700px; } }
 
+/******** generic background classes ********/
 .bg--color-blue {
   background-color: #17607D; }
+
+.bg--color-red {
+  background-color: #D64700; }
 
 .border--main {
   border-color: white; }
 
 .border--bottom--dashed {
   border-bottom-style: dashed; }
+
+.image--smile {
+  position: relative;
+  top: -100px;
+  width: 400px; }
 
 .relative {
   position: relative; }
@@ -5185,7 +5194,7 @@ div[class^="cover--"] {
 .full-page {
   min-height: 750px; }
 
-.page--center, .page--center--portable {
+.vertical-center, .page--center--left, .page--center, .page--center--portable {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5193,6 +5202,9 @@ div[class^="cover--"] {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.page--center--left {
+  left: 0; }
 
 .page--center, .page--center--portable {
   left: 25%; }
@@ -5235,5 +5247,18 @@ div[class^="cover--"] {
 
 .text--style-header {
   font-family: 'DearAnnabelle'; }
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  overflow: hidden; }
+
+.timeline {
+  height: 100%; }
+  .timeline::before {
+    content: '';
+    border: 1px dashed #FFF1CE;
+    height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
