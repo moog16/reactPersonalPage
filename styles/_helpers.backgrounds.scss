@@ -12,21 +12,26 @@ div[class^="cover--"] {
 
 .cover--foggy-northface {
   background-image: url('assets/images/foggy_northface.png');
+  background-repeat: no-repeat;
+  margin-top: -180px;
+  padding-top: 180px;
   h1 {
-    font-size: 6rem;
+    font-size: 4rem;
+  }
+  @media (max-width: 1150px) {
+    background-position-x: -200px;
   }
   @include media-query(lap) {
-    min-height: 600px;
-    background-position: -130px;
-    h1 {
-      font-size: 4rem;
-    }
+    background-position-x: -350px;
   }
   @include media-query(palm) {
-    background-position: -250px;
+    background-position-x: -600px;
     h1 {
       font-size: 3rem;
     }
+  }
+  @include media-query(narrow) {
+    background-position-x: -700px;
   }
 }
 

@@ -6,12 +6,17 @@
   text-transform: uppercase;
 }
 
-.text--color--light {
-  color: $text--color-white;
+.text--color-light {
+  color: $text--color-light;
 }
 
 .text--color-dark-blue {
   color: $text--color-dark-blue;
+}
+
+
+.text--medium {
+  font-size: 1.5rem;
 }
 
 .text--large {
@@ -21,8 +26,14 @@
   };
 }
 
+.text--normal--narrow {
+  @include media-query(narrow) {
+    font-size: 1rem;
+  };
+}
+
 .text--huge {
-  font--size: 5rem;
+  font-size: 5rem;
 }
 
 .text--style-normal {

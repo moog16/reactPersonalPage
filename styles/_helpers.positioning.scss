@@ -33,6 +33,10 @@
 .page--center {
   @extend %vertical-center;
   left: 25%;
+}
+
+.page--center--portable {
+  @extend .page--center;
   @include media-query(portable) {
     left: 0;
   }
