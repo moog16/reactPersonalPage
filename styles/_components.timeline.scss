@@ -1,8 +1,26 @@
 .timeline {
   height: 100%;
+  position: relative;
+  margin-top: 0;
   &::before {
     content: '';
-    border: 1px dashed $light;
+    border: 3px dashed $light;
     height: 100%;
+    position: absolute;
+    left: 50%;
+  }
+}
+
+.timeline__content {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 81px;
+    border: 3px dashed $light;
+    position: absolute;
+    top: 50%;
+    left: 284px;
+
   }
 }

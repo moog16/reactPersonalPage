@@ -6,7 +6,7 @@ class Capture extends React.Component {
       <div className="bg--color-blue full-page relative">
         <div className="layout layout--center layout--flush">
           <div className="page--center--portable layout__item u-1/2 u-1/1-portable text--color-light text--large text--center">
-              <div class="text--center">
+              <div className="text--center">
                 <div className="text--style-header text--center">
                    I love making things
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import SplashPage from '../SplashPage';
 import Capture from '../Capture';
 import Statement from '../Statement';
-import AboutMe from '../AboutMe';
+import AboutMe from '../AboutMe/AboutMe.js';
 
 class Home extends React.Component {
   render() {

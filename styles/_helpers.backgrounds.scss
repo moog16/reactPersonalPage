@@ -22,7 +22,10 @@ div[class^="cover--"] {
     background-position-x: -200px;
   }
   @include media-query(lap) {
-    background-position-x: -350px;
+    background-position-x: -300px;
+  }
+  @media (max-width: 830px) {
+    background-position-x: -400px;
   }
   @include media-query(palm) {
     background-position-x: -600px;
