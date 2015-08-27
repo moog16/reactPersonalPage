@@ -6,8 +6,8 @@ class Statement extends React.Component {
       <div className="cover--foggy-northface">
         <div className="section u-pt+">
           <div className="layout layout--right">
-            <div className="layout__item u-1/3 u-1/2-lap u-3/4-palm u-ml+">
-              <div className="u-pr">
+            <div className="layout__item u-1/2 u-1/1-palm">
+              <div className="u-ph">
                 <h1 className="u-mv0">
                   what I do...
                 </h1>

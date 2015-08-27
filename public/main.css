@@ -4,79 +4,6 @@
  *
  * github.com/inuitcss | inuitcss.com
  */
-/*------------------------------------*\
-    #PAGE
-\*------------------------------------*/
-/**
- * High-, page-level styling.
- *
- * 1. Set the default `font-size` and `line-height` for the entire project,
- *    sourced from our default variables. The `font-size` is calculated to exist
- *    in ems, the `line-height` is calculated to exist unitlessly.
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
- * 4. Prevent certain mobile browsers from automatically zooming fonts.
- * 5. Fonts on OSX will look more consistent with other systems that do not
- *    render text using sub-pixel anti-aliasing.
- */
-html {
-  font-size: 1em;
-  /* [1] */
-  line-height: 1.5;
-  /* [1] */
-  background-color: #fff;
-  color: #333;
-  overflow-y: scroll;
-  /* [2] */
-  min-height: 100%;
-  /* [3] */
-  -webkit-text-size-adjust: 100%;
-  /* [4] */
-  -ms-text-size-adjust: 100%;
-  /* [4] */
-  -moz-osx-font-smoothing: grayscale;
-  /* [5] */
-  -webkit-font-smoothing: antialiased;
-  /* [5] */ }
-
-/*------------------------------------*\
-    #HEADINGS
-\*------------------------------------*/
-/**
- * Headings 1–6.
- */
-h1 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.33333; }
-
-h2 {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6; }
-
-h3 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1; }
-
-h4 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.2; }
-
-h5 {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5; }
-
-h6 {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429; }
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -455,6 +382,121 @@ html {
   box-sizing: inherit; }
 
 /*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  background-color: #fff;
+  color: #333;
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-text-size-adjust: 100%;
+  /* [4] */
+  -ms-text-size-adjust: 100%;
+  /* [4] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */
+  -webkit-font-smoothing: antialiased;
+  /* [5] */ }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6.
+ */
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+h6 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+html,
+body {
+  font-family: 'Cocomat';
+  font-weight: 500;
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DearAnnabelle'; }
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 150px;
+  overflow: hidden; }
+
+.timeline {
+  height: 100%;
+  position: relative;
+  margin-top: 0; }
+  .timeline::before {
+    content: '';
+    border: 3px dashed #FFF1CE;
+    height: 100%;
+    position: absolute;
+    left: 50%; }
+
+.timeline__content {
+  position: relative; }
+  .timeline__content::before {
+    content: '';
+    display: block;
+    width: 81px;
+    height: 1px;
+    border: 3px dashed #FFF1CE;
+    position: absolute;
+    top: 50%;
+    left: 284px; }
+
+/*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
 /**
@@ -573,217 +615,6 @@ html {
  */
 .layout--auto > .layout__item {
   width: auto; }
-
-/*------------------------------------*\
-    #WIDTHS
-\*------------------------------------*/
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
- * word format (e.g. `.u-2-of-3`). Use these in your markup:
- *
- * <div class="u-7/12">
- */
-.u-1\/1 {
-  width: 100% !important; }
-
-.u-1\/2 {
-  width: 50% !important; }
-
-.u-1\/3 {
-  width: 33.33333% !important; }
-
-.u-2\/3 {
-  width: 66.66667% !important; }
-
-.u-1\/4 {
-  width: 25% !important; }
-
-.u-2\/4 {
-  width: 50% !important; }
-
-.u-3\/4 {
-  width: 75% !important; }
-
-.u-1\/5 {
-  width: 20% !important; }
-
-.u-2\/5 {
-  width: 40% !important; }
-
-.u-3\/5 {
-  width: 60% !important; }
-
-.u-4\/5 {
-  width: 80% !important; }
-
-.u-1\/6 {
-  width: 16.66667% !important; }
-
-.u-2\/6 {
-  width: 33.33333% !important; }
-
-.u-3\/6 {
-  width: 50% !important; }
-
-.u-4\/6 {
-  width: 66.66667% !important; }
-
-.u-5\/6 {
-  width: 83.33333% !important; }
-
-.u-1\/7 {
-  width: 14.28571% !important; }
-
-.u-2\/7 {
-  width: 28.57143% !important; }
-
-.u-3\/7 {
-  width: 42.85714% !important; }
-
-.u-4\/7 {
-  width: 57.14286% !important; }
-
-.u-5\/7 {
-  width: 71.42857% !important; }
-
-.u-6\/7 {
-  width: 85.71429% !important; }
-
-.u-1\/8 {
-  width: 12.5% !important; }
-
-.u-2\/8 {
-  width: 25% !important; }
-
-.u-3\/8 {
-  width: 37.5% !important; }
-
-.u-4\/8 {
-  width: 50% !important; }
-
-.u-5\/8 {
-  width: 62.5% !important; }
-
-.u-6\/8 {
-  width: 75% !important; }
-
-.u-7\/8 {
-  width: 87.5% !important; }
-
-.u-1\/9 {
-  width: 11.11111% !important; }
-
-.u-2\/9 {
-  width: 22.22222% !important; }
-
-.u-3\/9 {
-  width: 33.33333% !important; }
-
-.u-4\/9 {
-  width: 44.44444% !important; }
-
-.u-5\/9 {
-  width: 55.55556% !important; }
-
-.u-6\/9 {
-  width: 66.66667% !important; }
-
-.u-7\/9 {
-  width: 77.77778% !important; }
-
-.u-8\/9 {
-  width: 88.88889% !important; }
-
-.u-1\/10 {
-  width: 10% !important; }
-
-.u-2\/10 {
-  width: 20% !important; }
-
-.u-3\/10 {
-  width: 30% !important; }
-
-.u-4\/10 {
-  width: 40% !important; }
-
-.u-5\/10 {
-  width: 50% !important; }
-
-.u-6\/10 {
-  width: 60% !important; }
-
-.u-7\/10 {
-  width: 70% !important; }
-
-.u-8\/10 {
-  width: 80% !important; }
-
-.u-9\/10 {
-  width: 90% !important; }
-
-.u-1\/11 {
-  width: 9.09091% !important; }
-
-.u-2\/11 {
-  width: 18.18182% !important; }
-
-.u-3\/11 {
-  width: 27.27273% !important; }
-
-.u-4\/11 {
-  width: 36.36364% !important; }
-
-.u-5\/11 {
-  width: 45.45455% !important; }
-
-.u-6\/11 {
-  width: 54.54545% !important; }
-
-.u-7\/11 {
-  width: 63.63636% !important; }
-
-.u-8\/11 {
-  width: 72.72727% !important; }
-
-.u-9\/11 {
-  width: 81.81818% !important; }
-
-.u-10\/11 {
-  width: 90.90909% !important; }
-
-.u-1\/12 {
-  width: 8.33333% !important; }
-
-.u-2\/12 {
-  width: 16.66667% !important; }
-
-.u-3\/12 {
-  width: 25% !important; }
-
-.u-4\/12 {
-  width: 33.33333% !important; }
-
-.u-5\/12 {
-  width: 41.66667% !important; }
-
-.u-6\/12 {
-  width: 50% !important; }
-
-.u-7\/12 {
-  width: 58.33333% !important; }
-
-.u-8\/12 {
-  width: 66.66667% !important; }
-
-.u-9\/12 {
-  width: 75% !important; }
-
-.u-10\/12 {
-  width: 83.33333% !important; }
-
-.u-11\/12 {
-  width: 91.66667% !important; }
 
 /*------------------------------------*\
     #WIDTHS-RESPONSIVE
@@ -2199,6 +2030,217 @@ html {
   .u-11\/12-retina {
     width: 91.66667% !important; } }
 /*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
+ * word format (e.g. `.u-2-of-3`). Use these in your markup:
+ *
+ * <div class="u-7/12">
+ */
+.u-1\/1 {
+  width: 100% !important; }
+
+.u-1\/2 {
+  width: 50% !important; }
+
+.u-1\/3 {
+  width: 33.33333% !important; }
+
+.u-2\/3 {
+  width: 66.66667% !important; }
+
+.u-1\/4 {
+  width: 25% !important; }
+
+.u-2\/4 {
+  width: 50% !important; }
+
+.u-3\/4 {
+  width: 75% !important; }
+
+.u-1\/5 {
+  width: 20% !important; }
+
+.u-2\/5 {
+  width: 40% !important; }
+
+.u-3\/5 {
+  width: 60% !important; }
+
+.u-4\/5 {
+  width: 80% !important; }
+
+.u-1\/6 {
+  width: 16.66667% !important; }
+
+.u-2\/6 {
+  width: 33.33333% !important; }
+
+.u-3\/6 {
+  width: 50% !important; }
+
+.u-4\/6 {
+  width: 66.66667% !important; }
+
+.u-5\/6 {
+  width: 83.33333% !important; }
+
+.u-1\/7 {
+  width: 14.28571% !important; }
+
+.u-2\/7 {
+  width: 28.57143% !important; }
+
+.u-3\/7 {
+  width: 42.85714% !important; }
+
+.u-4\/7 {
+  width: 57.14286% !important; }
+
+.u-5\/7 {
+  width: 71.42857% !important; }
+
+.u-6\/7 {
+  width: 85.71429% !important; }
+
+.u-1\/8 {
+  width: 12.5% !important; }
+
+.u-2\/8 {
+  width: 25% !important; }
+
+.u-3\/8 {
+  width: 37.5% !important; }
+
+.u-4\/8 {
+  width: 50% !important; }
+
+.u-5\/8 {
+  width: 62.5% !important; }
+
+.u-6\/8 {
+  width: 75% !important; }
+
+.u-7\/8 {
+  width: 87.5% !important; }
+
+.u-1\/9 {
+  width: 11.11111% !important; }
+
+.u-2\/9 {
+  width: 22.22222% !important; }
+
+.u-3\/9 {
+  width: 33.33333% !important; }
+
+.u-4\/9 {
+  width: 44.44444% !important; }
+
+.u-5\/9 {
+  width: 55.55556% !important; }
+
+.u-6\/9 {
+  width: 66.66667% !important; }
+
+.u-7\/9 {
+  width: 77.77778% !important; }
+
+.u-8\/9 {
+  width: 88.88889% !important; }
+
+.u-1\/10 {
+  width: 10% !important; }
+
+.u-2\/10 {
+  width: 20% !important; }
+
+.u-3\/10 {
+  width: 30% !important; }
+
+.u-4\/10 {
+  width: 40% !important; }
+
+.u-5\/10 {
+  width: 50% !important; }
+
+.u-6\/10 {
+  width: 60% !important; }
+
+.u-7\/10 {
+  width: 70% !important; }
+
+.u-8\/10 {
+  width: 80% !important; }
+
+.u-9\/10 {
+  width: 90% !important; }
+
+.u-1\/11 {
+  width: 9.09091% !important; }
+
+.u-2\/11 {
+  width: 18.18182% !important; }
+
+.u-3\/11 {
+  width: 27.27273% !important; }
+
+.u-4\/11 {
+  width: 36.36364% !important; }
+
+.u-5\/11 {
+  width: 45.45455% !important; }
+
+.u-6\/11 {
+  width: 54.54545% !important; }
+
+.u-7\/11 {
+  width: 63.63636% !important; }
+
+.u-8\/11 {
+  width: 72.72727% !important; }
+
+.u-9\/11 {
+  width: 81.81818% !important; }
+
+.u-10\/11 {
+  width: 90.90909% !important; }
+
+.u-1\/12 {
+  width: 8.33333% !important; }
+
+.u-2\/12 {
+  width: 16.66667% !important; }
+
+.u-3\/12 {
+  width: 25% !important; }
+
+.u-4\/12 {
+  width: 33.33333% !important; }
+
+.u-5\/12 {
+  width: 41.66667% !important; }
+
+.u-6\/12 {
+  width: 50% !important; }
+
+.u-7\/12 {
+  width: 58.33333% !important; }
+
+.u-8\/12 {
+  width: 66.66667% !important; }
+
+.u-9\/12 {
+  width: 75% !important; }
+
+.u-10\/12 {
+  width: 83.33333% !important; }
+
+.u-11\/12 {
+  width: 91.66667% !important; }
+
+/*------------------------------------*\
     #SPACING
 \*------------------------------------*/
 /**
@@ -2652,6 +2694,49 @@ html {
 .u-pv0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
+ * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * Use these helper classes to cause other elements to adopt the styling of the
+ * respective heading, e.g.:
+ *
+   <h2 class="alpha">Lorem ipsum</h2>
+ *
+ */
+.alpha {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+.beta {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+.gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+.delta {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+.epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
 
 /*------------------------------------*\
     #SPACING-RESPONSIVE
@@ -5063,63 +5148,7 @@ html {
   .desk-pv0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important; } }
-/*------------------------------------*\
-    #HEADINGS
-\*------------------------------------*/
-/**
- * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
- * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
- *
- * Use these helper classes to cause other elements to adopt the styling of the
- * respective heading, e.g.:
- *
-   <h2 class="alpha">Lorem ipsum</h2>
- *
- */
-.alpha {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.33333; }
-
-.beta {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6; }
-
-.gamma {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1; }
-
-.delta {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.2; }
-
-.epsilon {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5; }
-
-.zeta {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429; }
-
 /* Mixin */
-html,
-body {
-  font-family: 'Cocomat';
-  font-weight: 500;
-  font-size: 16px; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'DearAnnabelle'; }
-
-.section {
-  max-width: 1100px;
-  margin: 0 auto; }
-
 div[class^="cover--"] {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -5141,23 +5170,27 @@ div[class^="cover--"] {
   padding-top: 180px; }
   .cover--foggy-northface h1 {
     font-size: 4rem; }
-  @media (max-width: 1150px) {
+  @media (max-width: 1900px) {
+    .cover--foggy-northface {
+      background-position-x: -100px; } }
+  @media (max-width: 1700px) {
     .cover--foggy-northface {
       background-position-x: -200px; } }
-  @media screen and (min-width: 45em) and (max-width: 63.9375em) {
+  @media (max-width: 1500px) {
     .cover--foggy-northface {
       background-position-x: -300px; } }
-  @media (max-width: 830px) {
+  @media (max-width: 1300px) {
     .cover--foggy-northface {
       background-position-x: -400px; } }
-  @media screen and (max-width: 44.9375em) {
+  @media (max-width: 1100px) {
     .cover--foggy-northface {
-      background-position-x: -600px; }
-      .cover--foggy-northface h1 {
-        font-size: 3rem; } }
-  @media screen and (max-width: 30.9375em) {
+      background-position-x: -500px; } }
+  @media (max-width: 1100px) {
     .cover--foggy-northface {
-      background-position-x: -700px; } }
+      background-position-x: -800px; } }
+  @media (max-width: 700px) {
+    .cover--foggy-northface {
+      background-position-x: -1000px; } }
 
 /******** generic background classes ********/
 .bg--color-blue {
@@ -5256,32 +5289,14 @@ div[class^="cover--"] {
 .text--style-header {
   font-family: 'DearAnnabelle'; }
 
-.circle {
-  width: 220px;
-  height: 220px;
-  border-radius: 150px;
-  overflow: hidden; }
-
-.timeline {
-  height: 100%;
-  position: relative;
-  margin-top: 0; }
-  .timeline::before {
-    content: '';
-    border: 3px dashed #FFF1CE;
-    height: 100%;
-    position: absolute;
-    left: 50%; }
-
-.timeline__content {
-  position: relative; }
-  .timeline__content::before {
-    content: '';
-    display: block;
-    width: 81px;
-    border: 3px dashed #FFF1CE;
-    position: absolute;
-    top: 50%;
-    left: 284px; }
+/*
+  settings
+  tools
+  generic
+  elements - base
+  objects
+  components
+  trumps
+*/
 
 /*# sourceMappingURL=main.css.map */
