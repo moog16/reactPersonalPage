@@ -4,6 +4,10 @@ module.exports = {
     output: {
       filename: 'public/bundle.js'
     },
+    resolve: {
+      modulesDirectories: ['./node_modules'],
+      extensions: ['', '.js']
+    },
     module: {
       loaders: [
         {

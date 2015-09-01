@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "react": "^0.13.3",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "react-waypoint": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^5.6.15",

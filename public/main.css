@@ -460,6 +460,9 @@ body {
   font-weight: 500;
   font-size: 16px; }
 
+body {
+  position: relative; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DearAnnabelle'; }
 
@@ -5233,7 +5236,8 @@ div[class^="cover--"] {
     display: inline; } }
 
 .full-page {
-  min-height: 750px; }
+  width: 100vw;
+  height: 100vh; }
 
 .vertical-center, .page--center--left, .page--center, .page--center--portable {
   position: absolute;
