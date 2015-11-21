@@ -11,7 +11,7 @@ class Statement extends React.Component {
                 <h1 className="u-mv0">
                   what I do...
                 </h1>
-                <div className="u-pl text--medium text--normal--narrow">
+                <div className="box--grey u-pl text--medium text--normal--narrow">
                   I am a web developer with a passion for building simple and elegant frontend apps that make everyday life easier. I believe technology streamlines mundane chores and errands, makes the impossible possible, and will change the lives of many.
                 </div>
               </div>

@@ -10,6 +10,10 @@
   color: $text--color-light;
 }
 
+.text--color-blue {
+  color: $text--color-blue;
+}
+
 .text--color-dark-blue {
   color: $text--color-dark-blue;
 }
@@ -42,5 +46,6 @@
 }
 
 .text--style-header {
-  font-family: 'DearAnnabelle';
+  font-family: 'Lobster';
+  font-weight: 400;
 }

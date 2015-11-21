@@ -4,6 +4,22 @@
  *
  * github.com/inuitcss | inuitcss.com
  */
+@font-face {
+  font-family: 'DearAnnabelle';
+  src: url("../fonts/DearAnnabelle.otf") format("opentype"); }
+@font-face {
+  font-family: 'Lobster';
+  src: url("../fonts/LobsterRegular.ttf") format("truetype");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Cocomat';
+  src: url("../fonts/CocomatUltralight.ttf") format("truetype");
+  font-weight: 300; }
+@font-face {
+  font-family: 'Cocomat';
+  src: url("../fonts/CocomatLight.ttf") format("truetype");
+  font-weight: 500; }
+/* Mixin */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -464,40 +480,77 @@ body {
   position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'DearAnnabelle'; }
+  font-family: 'Lobster', Arial, serif;
+  font-weight: 400; }
 
 .section {
   max-width: 1100px;
   margin: 0 auto; }
+
+.relative {
+  position: relative; }
+
+.fixed {
+  position: fixed; }
+
+.ib {
+  display: inline-block; }
+
+.inline {
+  display: inline; }
+
+@media screen and (min-width: 64em) {
+  .ib--desk {
+    display: inline-block; } }
+
+@media screen and (min-width: 64em) {
+  .inline--desk {
+    display: inline; } }
+
+.full-page {
+  width: 100vw;
+  height: 100vh; }
+
+.vertical-center, .page--center--left, .page--center, .page--center--portable {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.page--center--left {
+  left: 0; }
+
+.page--center, .page--center--portable {
+  left: 25%; }
+
+@media screen and (max-width: 63.9375em) {
+  .page--center--portable {
+    left: 0; } }
+
+/*------------------------------------*\
+    #BOX
+\*------------------------------------*/
+/**
+ * The box object simply boxes off content.
+ */
+/**
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box {
+  display: block;
+  /* [1] */
+  padding: 24px; }
+  .box > :last-child {
+    margin-bottom: 0; }
 
 .circle {
   width: 220px;
   height: 220px;
   border-radius: 150px;
   overflow: hidden; }
-
-.timeline {
-  height: 100%;
-  position: relative;
-  margin-top: 0; }
-  .timeline::before {
-    content: '';
-    border: 3px dashed #FFF1CE;
-    height: 100%;
-    position: absolute;
-    left: 50%; }
-
-.timeline__content {
-  position: relative; }
-  .timeline__content::before {
-    content: '';
-    display: block;
-    width: 81px;
-    height: 1px;
-    border: 3px dashed #FFF1CE;
-    position: absolute;
-    top: 50%;
-    left: 284px; }
 
 /*------------------------------------*\
     #LAYOUT
@@ -618,6 +671,81 @@ h1, h2, h3, h4, h5, h6 {
  */
 .layout--auto > .layout__item {
   width: auto; }
+
+div[class^="cover--"] {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh; }
+
+.cover__header {
+  font-size: 5rem; }
+
+.cover--explorer {
+  background-image: url("assets/images/explorer.jpg");
+  position: fixed;
+  z-index: -10; }
+
+/******** generic background classes ********/
+.bg--color-blue {
+  background-color: #17607D; }
+
+.bg--color-red {
+  background-color: #D64700; }
+
+.bg--color-opaque {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.box--grey {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px; }
+
+.border--main {
+  border-color: white; }
+
+.border--bottom {
+  border-bottom: 1px solid; }
+
+.border--thick {
+  border-width: 2px; }
+
+.border--bottom--dashed {
+  border-bottom-style: dashed; }
+
+.image--smile {
+  position: relative;
+  top: -100px;
+  width: 400px; }
+
+.sunset--bridge {
+  position: relative;
+  top: -145px;
+  width: 343px; }
+
+.timeline {
+  height: 100%;
+  position: relative;
+  margin-top: 0; }
+  .timeline::before {
+    content: '';
+    border: 3px dashed #FFF1CE;
+    height: 100%;
+    position: absolute;
+    left: 50%; }
+
+.timeline__content {
+  position: relative; }
+  .timeline__content::before {
+    content: '';
+    display: block;
+    width: 81px;
+    height: 1px;
+    border: 3px dashed #FFF1CE;
+    position: absolute;
+    top: 50%;
+    left: 284px; }
 
 /*------------------------------------*\
     #WIDTHS
@@ -5151,112 +5279,19 @@ h1, h2, h3, h4, h5, h6 {
   .desk-pv0 {
     padding-top: 0 !important;
     padding-bottom: 0 !important; } }
-/* Mixin */
-div[class^="cover--"] {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh; }
-
-.cover--fish {
-  background-image: url("assets/images/fish.png"); }
-  @media screen and (max-width: 44.9375em) {
-    .cover--fish {
-      background-position: -100px; } }
-
-.cover--foggy-northface {
-  background-image: url("assets/images/foggy_northface.png");
-  background-repeat: no-repeat;
-  margin-top: -180px;
-  padding-top: 180px; }
-  .cover--foggy-northface h1 {
-    font-size: 4rem; }
-  @media (max-width: 1900px) {
-    .cover--foggy-northface {
-      background-position-x: -100px; } }
-  @media (max-width: 1700px) {
-    .cover--foggy-northface {
-      background-position-x: -200px; } }
-  @media (max-width: 1500px) {
-    .cover--foggy-northface {
-      background-position-x: -300px; } }
-  @media (max-width: 1300px) {
-    .cover--foggy-northface {
-      background-position-x: -400px; } }
-  @media (max-width: 1100px) {
-    .cover--foggy-northface {
-      background-position-x: -500px; } }
-  @media (max-width: 1100px) {
-    .cover--foggy-northface {
-      background-position-x: -800px; } }
-  @media screen and (max-width: 44.9375em) {
-    .cover--foggy-northface {
-      background-position-x: -1000px; } }
-
-/******** generic background classes ********/
-.bg--color-blue {
-  background-color: #17607D; }
-
-.bg--color-red {
-  background-color: #D64700; }
-
-.border--main {
-  border-color: white; }
-
-.border--bottom--dashed {
-  border-bottom-style: dashed; }
-
-.image--smile {
-  position: relative;
-  top: -100px;
-  width: 400px; }
-
-.sunset--bridge {
-  position: relative;
-  top: -145px;
-  width: 343px; }
-
-.relative {
-  position: relative; }
-
-.ib {
-  display: inline-block; }
-
-.inline {
-  display: inline; }
-
-@media screen and (min-width: 64em) {
-  .ib--desk {
-    display: inline-block; } }
-
-@media screen and (min-width: 64em) {
-  .inline--desk {
-    display: inline; } }
-
-.full-page {
-  width: 100vw;
-  height: 100vh; }
-
-.vertical-center, .page--center--left, .page--center, .page--center--portable {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
-.page--center--left {
-  left: 0; }
-
-.page--center, .page--center--portable {
-  left: 25%; }
-
-@media screen and (max-width: 63.9375em) {
-  .page--center--portable {
-    left: 0; } }
+/*------------------------------------*\
+    #CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+.clearfix:after,
+.box:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .text--center {
   text-align: center !important; }
@@ -5266,6 +5301,9 @@ div[class^="cover--"] {
 
 .text--color-light {
   color: #FFF1CE; }
+
+.text--color-blue {
+  color: #17607D; }
 
 .text--color-dark-blue {
   color: #002A4A; }
@@ -5291,7 +5329,8 @@ div[class^="cover--"] {
   font-weight: 500; }
 
 .text--style-header {
-  font-family: 'DearAnnabelle'; }
+  font-family: 'Lobster';
+  font-weight: 400; }
 
 /*
   settings

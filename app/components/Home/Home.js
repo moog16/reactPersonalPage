@@ -1,19 +1,30 @@
 import React from 'react';
-import SplashPage from '../SplashPage';
-import Capture from '../Capture';
-import Statement from '../Statement';
-import AboutMe from '../AboutMe/AboutMe.js';
+import Splash from '../Splash';
 
 class Home extends React.Component {
   render() {
     return  (
       <div>
-        {/*<SplashPage />*/}
-        <Capture />
-        <Statement />
-        <AboutMe />
+        <div className="cover--explorer full-page">
+        </div>
+        <Splash />
+        <div className="full-page">
+          meow
+        </div>
       </div>
     )
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    console.log('handling scroll')
   }
 };
 

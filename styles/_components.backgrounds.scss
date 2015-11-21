@@ -1,0 +1,27 @@
+div[class^="cover--"] {
+  @include vendor(background-size, cover);
+  height: 100vh;
+}
+.cover__header {
+  font-size: 5rem;
+}
+
+.cover--explorer {
+  background-image: url('assets/images/explorer.jpg');
+  position: fixed;
+  z-index: -10;
+}
+
+/******** generic background classes ********/
+
+.bg--color-blue {
+  background-color: $blue;
+}
+
+.bg--color-red {
+  background-color: $red;
+}
+
+.bg--color-opaque {
+  background-color: rgba(0, 0, 0, 0.3);
+}
