@@ -3,11 +3,31 @@ div[class^="cover--"] {
   height: 100vh;
 }
 .cover__header {
-  font-size: 5rem;
+  left: 0;
+  right: 0;
+  margin: 25vmin;
+  @include media-query(palm) {
+    margin: 15vmin
+  }
+  h1 {
+    font-size: 5rem;
+    @include media-query(lap) {
+      font-size: 3rem;
+    };
+    @include media-query(palm) {
+      font-size: 2rem;
+    };
+  }
 }
 
 .cover--explorer {
   background-image: url('assets/images/explorer.jpg');
+  position: fixed;
+  z-index: -10;
+}
+
+.cover--blue-door {
+  background-image: url('assets/images/blue_door.jpg');
   position: fixed;
   z-index: -10;
 }

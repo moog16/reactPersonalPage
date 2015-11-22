@@ -21,6 +21,12 @@
 
 .text--medium {
   font-size: 1.5rem;
+  @include media-query(lap) {
+    font-size: 1.25rem;
+  };
+  @include media-query(palm) {
+    font-size: .875rem;
+  };
 }
 
 .text--large {
@@ -41,8 +47,8 @@
 }
 
 .text--style-normal {
-  font-family: 'Cocomat';
-  font-weight: 500;
+  font-family: 'JosefinSans';
+  font-weight: 400;
 }
 
 .text--style-header {

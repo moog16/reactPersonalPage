@@ -5,20 +5,29 @@
  * github.com/inuitcss | inuitcss.com
  */
 @font-face {
-  font-family: 'DearAnnabelle';
-  src: url("../fonts/DearAnnabelle.otf") format("opentype"); }
-@font-face {
   font-family: 'Lobster';
   src: url("../fonts/LobsterRegular.ttf") format("truetype");
   font-weight: 400; }
 @font-face {
-  font-family: 'Cocomat';
-  src: url("../fonts/CocomatUltralight.ttf") format("truetype");
+  font-family: 'JosefinSans';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Thin.ttf") format("truetype");
+  font-weight: 100; }
+@font-face {
+  font-family: 'JosefinSans';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
   font-weight: 300; }
 @font-face {
-  font-family: 'Cocomat';
-  src: url("../fonts/CocomatLight.ttf") format("truetype");
-  font-weight: 500; }
+  font-family: 'JosefinSans';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+  font-weight: 400; }
+@font-face {
+  font-family: 'JosefinSans';
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+  font-weight: 600; }
+@font-face {
+  font-family: 'JosefinSans';
+  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+  font-weight: 700; }
 /* Mixin */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -472,7 +481,7 @@ h6 {
 
 html,
 body {
-  font-family: 'Cocomat';
+  font-family: 'JosefinSans', Times, serif;
   font-weight: 500;
   font-size: 16px; }
 
@@ -510,6 +519,10 @@ h1, h2, h3, h4, h5, h6 {
 .full-page {
   width: 100vw;
   height: 100vh; }
+
+.half-page {
+  width: 100vw;
+  height: 50vh; }
 
 .vertical-center, .page--center--left, .page--center, .page--center--portable {
   position: absolute;
@@ -681,10 +694,28 @@ div[class^="cover--"] {
   height: 100vh; }
 
 .cover__header {
-  font-size: 5rem; }
+  left: 0;
+  right: 0;
+  margin: 25vmin; }
+  @media screen and (max-width: 44.9375em) {
+    .cover__header {
+      margin: 15vmin; } }
+  .cover__header h1 {
+    font-size: 5rem; }
+    @media screen and (min-width: 45em) and (max-width: 63.9375em) {
+      .cover__header h1 {
+        font-size: 3rem; } }
+    @media screen and (max-width: 44.9375em) {
+      .cover__header h1 {
+        font-size: 2rem; } }
 
 .cover--explorer {
   background-image: url("assets/images/explorer.jpg");
+  position: fixed;
+  z-index: -10; }
+
+.cover--blue-door {
+  background-image: url("assets/images/blue_door.jpg");
   position: fixed;
   z-index: -10; }
 
@@ -5310,6 +5341,12 @@ div[class^="cover--"] {
 
 .text--medium {
   font-size: 1.5rem; }
+  @media screen and (min-width: 45em) and (max-width: 63.9375em) {
+    .text--medium {
+      font-size: 1.25rem; } }
+  @media screen and (max-width: 44.9375em) {
+    .text--medium {
+      font-size: .875rem; } }
 
 .text--large {
   font-size: 3rem; }
@@ -5325,8 +5362,8 @@ div[class^="cover--"] {
   font-size: 5rem; }
 
 .text--style-normal {
-  font-family: 'Cocomat';
-  font-weight: 500; }
+  font-family: 'JosefinSans';
+  font-weight: 400; }
 
 .text--style-header {
   font-family: 'Lobster';
