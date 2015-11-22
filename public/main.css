@@ -479,6 +479,9 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.71429; }
 
+.animation--ease-out {
+  animation: all 1.5s ease-out; }
+
 html,
 body {
   font-family: 'JosefinSans', Times, serif;

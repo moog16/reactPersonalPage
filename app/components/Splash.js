@@ -1,18 +1,23 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
 import classNames from 'classnames';
 
 class Splash extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-// { 'fixed': !this.props.isShowingAboutMeContainer }
   render() {
     var coverHeaderClass = classNames(
-      'cover__header', 'box--grey', 'ib', 'u-mt++', 'u-p', 'fixed');
+      'cover__header', 'box--grey', 'ib', 'u-mt++', 'u-p', 'fixed', 'animation--ease-out');
+    var vertTranslation = 0;
+    if(this.props.isShowingAboutMeContainer) {
+      vertTranslation = 350-this.props.scrollPos;
+    }
+    var coverHeaderStyle = {
+      msTransform: `translate(0 ,${vertTranslation}px)`, /* IE 9 */
+      WebkitTransition: `translate(0 ,${vertTranslation}px)`, /* Safari */
+      transform: `translate(0 ,${vertTranslation}px)`
+    }
+
     return  (
       <div className='text--center bg--color-opaque full-page'>
-        <div className={coverHeaderClass}>
+        <div className={coverHeaderClass} style={coverHeaderStyle}>
           <div className='border--bottom border--thick ib u-ph+ palm-ph-'>
             <h1 className='u-m0'>
               Matt Goo
@@ -27,14 +32,6 @@ class Splash extends React.Component {
         </div>
       </div>
     )
-  }
-
-  _handleWaypointEnter() {
-    console.log('hello entering')
-  }
-
-  _handleWaypointLeave() {
-    console.log('leaving')
   }
 };
 
