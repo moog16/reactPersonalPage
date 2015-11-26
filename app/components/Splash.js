@@ -4,16 +4,9 @@ import classNames from 'classnames';
 class Splash extends React.Component {
   render() {
     var coverHeaderClass = classNames(
-      'cover__header', 'box--grey', 'ib', 'u-mt++', 'u-p', 'fixed', 'animation--ease-out');
-    var vertTranslation = 0;
-    if(this.props.isShowingAboutMeContainer) {
-      vertTranslation = 350-this.props.scrollPos;
-    }
-    var coverHeaderStyle = {
-      msTransform: `translate(0 ,${vertTranslation}px)`, /* IE 9 */
-      WebkitTransition: `translate(0 ,${vertTranslation}px)`, /* Safari */
-      transform: `translate(0 ,${vertTranslation}px)`
-    }
+      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed', 'animation--ease-in');
+
+    var coverHeaderStyle = this._getCoverHeaderStyle();
 
     return  (
       <div className='text--center bg--color-opaque full-page'>
@@ -23,15 +16,24 @@ class Splash extends React.Component {
               Matt Goo
             </h1>
           </div>
-          <div className='text--medium text--color-blue'>
+          <div className='text--large text--color-blue'>
             Adventurer - Web Developer
-          </div>
-          <div className='text--medium text--color-blue'>
-            {this.props.scrollPos}
           </div>
         </div>
       </div>
     )
+  }
+
+  _getCoverHeaderStyle() {
+    var vertTranslation = 0;
+    if(this.props.isShowingAboutMeContainer || this.props.scrollPos > 900) {
+      vertTranslation = 200-this.props.scrollPos;
+    }
+    return {
+      msTransform: `translate(0 ,${vertTranslation}px)`, /* IE 9 */
+      WebkitTransition: `translate(0 ,${vertTranslation}px)`, /* Safari */
+      transform: `translate(0 ,${vertTranslation}px)`
+    }
   }
 };
 

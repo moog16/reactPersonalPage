@@ -1,5 +1,7 @@
 import React from 'react';
 import Splash from '../Splash';
+import AboutMe from '../AboutMe';
+import BlueDoor from '../BlueDoor';
 import Waypoint from 'react-waypoint';
 
 class Home extends React.Component {
@@ -18,16 +20,14 @@ class Home extends React.Component {
         <Splash
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}/>
-        <div className='half-page bg--color-red'>
-          meow
-        </div>
+        <AboutMe />
         <Waypoint
           onEnter={this._handleWaypointEnter.bind(this)}
           onLeave={this._handleWaypointLeave.bind(this)}
-          threshold={0} />
-        <div className='full-page'>
-          meow
-        </div>
+          threshold={0.2} />
+        <BlueDoor
+          isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
+          scrollPos={this.state.scrollPos}/>
       </div>
     )
   }
@@ -53,7 +53,6 @@ class Home extends React.Component {
     }
 
     var scrollTop = event.srcElement.body.scrollTop;
-    console.log(`scrollTop ${scrollTop}`);
     this.setState({scrollPos: scrollTop});
   }
 };

@@ -479,8 +479,8 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.71429; }
 
-.animation--ease-out {
-  animation: all 1.5s ease-out; }
+.animation--ease-in {
+  animation: all 1.5s ease-in; }
 
 html,
 body {
@@ -694,23 +694,22 @@ div[class^="cover--"] {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh; }
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -ms-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
 
 .cover__header {
   left: 0;
   right: 0;
-  margin: 25vmin; }
-  @media screen and (max-width: 44.9375em) {
-    .cover__header {
-      margin: 15vmin; } }
+  margin: 0;
+  margin-top: 20vh; }
   .cover__header h1 {
-    font-size: 5rem; }
-    @media screen and (min-width: 45em) and (max-width: 63.9375em) {
-      .cover__header h1 {
-        font-size: 3rem; } }
-    @media screen and (max-width: 44.9375em) {
-      .cover__header h1 {
-        font-size: 2rem; } }
+    font-size: 7rem; }
 
 .cover--explorer {
   background-image: url("assets/images/explorer.jpg");
@@ -718,9 +717,13 @@ div[class^="cover--"] {
   z-index: -10; }
 
 .cover--blue-door {
-  background-image: url("assets/images/blue_door.jpg");
-  position: fixed;
-  z-index: -10; }
+  background-image: url("assets/images/blue_door.jpg"); }
+  @media screen and (min-width: 45em) and (max-width: 63.9375em) {
+    .cover--blue-door {
+      background-position-x: -50px; } }
+  @media screen and (max-width: 44.9375em) {
+    .cover--blue-door {
+      background-position-x: -100px; } }
 
 /******** generic background classes ********/
 .bg--color-blue {
@@ -5339,17 +5342,17 @@ div[class^="cover--"] {
 .text--color-blue {
   color: #17607D; }
 
+.text--color-white {
+  color: white; }
+
 .text--color-dark-blue {
   color: #002A4A; }
 
 .text--medium {
   font-size: 1.5rem; }
-  @media screen and (min-width: 45em) and (max-width: 63.9375em) {
+  @media screen and (max-width: 63.9375em) {
     .text--medium {
       font-size: 1.25rem; } }
-  @media screen and (max-width: 44.9375em) {
-    .text--medium {
-      font-size: .875rem; } }
 
 .text--large {
   font-size: 3rem; }
