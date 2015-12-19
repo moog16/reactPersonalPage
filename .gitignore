@@ -4,3 +4,5 @@ node_modules
 bundle.js
 .idea
 .sass-cache
+public/main.css
+public/main.css.map

@@ -22,8 +22,8 @@ class Home extends React.Component {
           scrollPos={this.state.scrollPos}/>
         <AboutMe />
         <Waypoint
-          onEnter={this._handleWaypointEnter.bind(this)}
-          onLeave={this._handleWaypointLeave.bind(this)}
+          onEnter={this._scrollSplashEnter.bind(this)}
+          onLeave={this._scrollSplashLeave.bind(this)}
           threshold={0.2} />
         <BlueDoor
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
@@ -32,13 +32,14 @@ class Home extends React.Component {
     )
   }
 
-  _handleWaypointEnter() {
+  _scrollSplashEnter() {
     this.setState({isShowingAboutMeContainer: true});
   }
 
-  _handleWaypointLeave() {
+  _scrollSplashLeave() {
     this.setState({isShowingAboutMeContainer: false});
   }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
