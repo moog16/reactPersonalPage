@@ -1,34 +1,26 @@
 import React from 'react';
-import TimelineLeft from '../Timeline/TimelineLeft';
+import ContactIcon from '../AboutMe/ContactIcon';
+
 class AboutMe extends React.Component {
   render() {
-    return (
-      <div className="bg--color-red full-page relative">
-        <div className="layout layout--right">
-          <div className="layout__item u-1/3 page--center--left">
-            <div className="u-p">
-              <div className="circle relative">
-                 /* <img src="assets/images/smile.jpg" className="image--smile"/>*/
-              </div>
-            </div>
-          </div>
-          <div className="layout__item u-2/3">
-            <ul className="timeline">
-              <li className="timeline__item">
-                <TimelineLeft />
-              </li>
-              <li className="timeline__item">
-                <TimelineLeft />
-              </li>
-              <li className="timeline__item">
-                <TimelineLeft />
-              </li>
-            </ul>
-          </div>
+    return  (
+      <div className='half-page bg--color-red u-p++ palm-p+ text--center text--medium text--color-white'>
+        <div>
+          I am a web developer with a passion for building simple and elegant frontend apps that make everyday life easier. I believe technology streamlines mundane chores and errands, makes the impossible possible, and will change the lives of many.
+        </div>
+        <div className='layout u-mt+'>
+          <ContactIcon icon="github" link="https://github.com/moog16"/>
+          <ContactIcon icon="linkedin" link="https://www.linkedin.com/in/mattgoo"/>
+          <ContactIcon icon="twitter" link="https://twitter.com/moog16"/>
         </div>
       </div>
     )
   }
+};
+
+AboutMe.propTypes = {
+};
+AboutMe.defaultProps = {
 };
 
 export default AboutMe;

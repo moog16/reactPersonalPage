@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "jquery": "^2.1.4",
     "react": "0.14.3",
     "react-router": "^0.13.3",
     "react-waypoint": "1.1.2"

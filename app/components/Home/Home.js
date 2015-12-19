@@ -1,6 +1,6 @@
 import React from 'react';
 import Splash from '../Splash';
-import AboutMe from '../AboutMe';
+import AboutMe from '../AboutMe/AboutMe';
 import BlueDoor from '../BlueDoor';
 import Waypoint from 'react-waypoint';
 

@@ -1,4 +1,4 @@
-$light: #FFF1CE;
+$light: #FFF1CE; // R: 255 G: 241 B: 206
 $orange: #FF9311;
 $red: #D64700;
 $blue: #17607D;
@@ -9,3 +9,5 @@ $text--color-white: white;
 $text--color-light: $light;
 $text--color-blue: $blue;
 $text--color-dark-blue: $dark-blue;
+
+$link--light-hover: rgba(255, 241, 206, 0.5);

@@ -56,3 +56,10 @@
   font-family: 'Lobster';
   font-weight: 400;
 }
+
+.link--color-light {
+  color: $text--color-light;
+  &:hover {
+    color: $link--light-hover;
+  }
+}

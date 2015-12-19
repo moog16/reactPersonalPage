@@ -5,6 +5,40 @@
  * github.com/inuitcss | inuitcss.com
  */
 @font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icons/icomoon.eot?u2dyxl");
+  src: url("../fonts/icons/icomoon.eot?u2dyxl#iefix") format("embedded-opentype"), url("../fonts/icons/icomoon.ttf?u2dyxl") format("truetype"), url("../fonts/icons/icomoon.woff?u2dyxl") format("woff"), url("../fonts/icons/icomoon.svg?u2dyxl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-mail:before {
+  content: "\e900"; }
+
+.icon-facebook:before {
+  content: "\e901"; }
+
+.icon-twitter:before {
+  content: "\e902"; }
+
+.icon-github:before {
+  content: "\e903"; }
+
+.icon-linkedin:before {
+  content: "\e904"; }
+
+@font-face {
   font-family: 'Lobster';
   src: url("../fonts/LobsterRegular.ttf") format("truetype");
   font-weight: 400; }
@@ -498,6 +532,11 @@ h1, h2, h3, h4, h5, h6 {
 .section {
   max-width: 1100px;
   margin: 0 auto; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: none; }
 
 .relative {
   position: relative; }
@@ -5374,6 +5413,11 @@ div[class^="cover--"] {
 .text--style-header {
   font-family: 'Lobster';
   font-weight: 400; }
+
+.link--color-light {
+  color: #FFF1CE; }
+  .link--color-light:hover {
+    color: rgba(255, 241, 206, 0.5); }
 
 /*
   settings
