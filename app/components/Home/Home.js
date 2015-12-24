@@ -2,6 +2,7 @@ import React from 'react';
 import Splash from '../Splash';
 import AboutMe from '../AboutMe/AboutMe';
 import BlueDoor from '../BlueDoor';
+import Resume from '../Resume';
 import Waypoint from 'react-waypoint';
 
 class Home extends React.Component {
@@ -9,7 +10,8 @@ class Home extends React.Component {
     super(props);
     this.state = {
       isShowingAboutMeContainer: props.isShowingAboutMeContainer,
-      scrollPos: props.scrollPos
+      scrollPos: props.scrollPos,
+      shouldHideNameHeader: false
     };
   }
 
@@ -19,7 +21,8 @@ class Home extends React.Component {
         <div className='cover--explorer full-page'></div>
         <Splash
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
-          scrollPos={this.state.scrollPos}/>
+          scrollPos={this.state.scrollPos}
+          shouldHideNameHeader={this.state.shouldHideNameHeader}/>
         <AboutMe />
         <Waypoint
           onEnter={this._scrollSplashEnter.bind(this)}
@@ -28,6 +31,7 @@ class Home extends React.Component {
         <BlueDoor
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}/>
+        <Resume/>
       </div>
     )
   }
@@ -49,22 +53,19 @@ class Home extends React.Component {
   }
 
   handleScroll(event) {
+    var scrollTop = event.srcElement.body.scrollTop;
+    var shouldHideNameHeader = false;
+    if(scrollTop > window.innerHeight) {
+      shouldHideNameHeader = true;
+    }
+    this.setState({shouldHideNameHeader: shouldHideNameHeader});
+
     if(!this.state.isShowingAboutMeContainer) {
       return;
     }
 
-    var scrollTop = event.srcElement.body.scrollTop;
     this.setState({scrollPos: scrollTop});
   }
-};
-
-Home.propTypes = {
-  isShowingAboutMeContainer: React.PropTypes.bool,
-  scrollPos: React.PropTypes.number
-};
-Home.defaultProps = {
-  isShowingAboutMeContainer: false,
-  scrollPos: 0
 };
 
 export default Home;

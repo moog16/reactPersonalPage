@@ -2,14 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 
 class Splash extends React.Component {
-  render() {
-    var coverHeaderClass = classNames(
-      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed');
 
-    var coverHeaderStyle = this._getCoverHeaderStyle();
+  render() {
+    let containerClass = classNames(
+      'text--center', 'bg--color-opaque', 'full-page');
+    let coverHeaderClass = classNames(
+      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed', {'hide': this.props.shouldHideNameHeader});
+
+    let coverHeaderStyle = this._getCoverHeaderStyle();
 
     return  (
-      <div className='text--center bg--color-opaque full-page'>
+      <div className={containerClass}>
         <div className={coverHeaderClass} style={coverHeaderStyle}>
           <div className='border--bottom border--thick ib u-ph+ palm-ph-'>
             <h1 className='u-m0'>
@@ -26,6 +29,7 @@ class Splash extends React.Component {
 
   _getCoverHeaderStyle() {
     var vertTranslation = 0;
+
     if(this.props.isShowingAboutMeContainer || this.props.scrollPos > 900) {
       vertTranslation = 200-this.props.scrollPos;
     }
@@ -37,7 +41,15 @@ class Splash extends React.Component {
   }
 };
 
-Splash.propTypes = {};
-Splash.defaultProps = {};
+Splash.propTypes = {
+  isShowingAboutMeContainer: React.PropTypes.bool,
+  scrollPos: React.PropTypes.number,
+  shouldHideNameHeader: React.PropTypes.bool
+};
+Splash.defaultProps = {
+  isShowingAboutMeContainer: false,
+  scrollPos: 0,
+  shouldHideNameHeader: true
+};
 
 export default Splash;

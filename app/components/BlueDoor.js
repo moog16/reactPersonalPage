@@ -7,16 +7,10 @@ class BlueDoor extends React.Component {
     return  (
       <div className='full-page'>
         <div className='cover--blue-door'>
-          <Specialties />
         </div>
       </div>
     )
   }
-};
-
-BlueDoor.propTypes = {
-};
-BlueDoor.defaultProps = {
 };
 
 export default BlueDoor;

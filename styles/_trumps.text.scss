@@ -22,6 +22,10 @@
   color: $text--color-dark-blue;
 }
 
+.text--hint {
+  color: $grey;
+}
+
 
 .text--medium {
   font-size: 1.5rem;
@@ -58,7 +62,7 @@
 }
 
 .link--color-light {
-  color: $text--color-light;
+  color: $text--link-light;
   &:hover {
     color: $link--light-hover;
   }
