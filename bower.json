@@ -23,6 +23,7 @@
     "inuit-starter-kit": "~0.2.9",
     "inuit-widths": "~0.4.2",
     "inuit-widths-responsive": "~0.2.2",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "inuit-buttons": "~0.4.2"
   }
 }
