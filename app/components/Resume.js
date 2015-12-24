@@ -9,9 +9,9 @@ class Resume extends React.Component{
             Resume
           </h2>
 
-          <div className="u-mb">
+          <div className="u-mb u-1/1">
             <a href="https://docs.google.com/document/d/1K2meu8QN1NByZ8YvG4kVzfF4wBAWIRs_sLFB4fiJu68/edit?usp=sharing">
-              <div className="btn">
+              <div className="btn u-1/2-palm u-1/4-lap u-1/6">
                 Download
               </div>
             </a>
