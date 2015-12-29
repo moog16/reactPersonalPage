@@ -1,0 +1,1 @@
+module.exports = require("npm:react-waypoint@1.1.3/build/npm/waypoint.js");
