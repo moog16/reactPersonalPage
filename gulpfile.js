@@ -20,6 +20,11 @@ gulp.task('sass', () => {
     .pipe(connect.reload());
 });
 
+gulp.task('js', () => {
+  return gulp.src('src/**/*.js')
+    .pipe(connect.reload());
+});
+
 gulp.task('copyImages', () => {
   gulp.src(['src/assets/images/**/*'])
     .pipe(gulp.dest('bin/static/img'))
@@ -39,7 +44,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(['./src/**/*.js']);
+  gulp.watch(['./src/**/*.js', ['js']]);
   gulp.watch(['./src/styles/**/*.scss'], ['sass']);
   gulp.watch(['./src/assets/images/**/*'], ['copyImages']);
   gulp.watch(['./src/assets/fonts/**/*'], ['copyFontsAndIcons']);
