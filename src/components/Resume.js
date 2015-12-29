@@ -18,10 +18,10 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img src="assets/images/logos/points_logo.jpg" />
+            <img src="bin/static/img/logos/points_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
-                Developement Engineer
+                Development Engineer
               </h4>
               <div className="text--hint">
                 April 2015 - Present
@@ -33,7 +33,7 @@ class Resume extends React.Component{
           </div>
 
           <div className="u-mb+">
-            <img src="assets/images/logos/switchfly_logo.jpg" />
+            <img src="bin/static/img/logos/switchfly_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Web Developer
@@ -48,7 +48,7 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img src="assets/images/logos/dg_logo.png" />
+            <img src="bin/static/img/logos/dg_logo.png" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Electrical Engineer

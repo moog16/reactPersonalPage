@@ -756,12 +756,12 @@ div[class^="cover--"] {
     font-size: 7rem; }
 
 .cover--explorer {
-  background-image: url("assets/images/explorer.jpg");
+  background-image: url("../img/explorer.jpg");
   position: fixed;
   z-index: -10; }
 
 .cover--blue-door {
-  background-image: url("assets/images/blue_door.jpg"); }
+  background-image: url("../img/blue_door.jpg"); }
   @media screen and (min-width: 45em) and (max-width: 63.9375em) {
     .cover--blue-door {
       background-position-x: -50px; } }

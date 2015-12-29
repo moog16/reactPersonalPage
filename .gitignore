@@ -1,8 +1,7 @@
 node_modules
+bin/**/*
 .DS_Store
 .sass-cache
 bundle.js
 .idea
 .sass-cache
-public/main.css
-public/main.css.map
