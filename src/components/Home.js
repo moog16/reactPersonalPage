@@ -1,8 +1,9 @@
 import React from 'react';
 import Splash from './Splash';
-import AboutMe from './AboutMe/AboutMe';
+import AboutMe from './AboutMe';
 import BlueDoor from './BlueDoor';
 import Resume from './Resume';
+import VideoFeed from './VideoFeed';
 import Waypoint from 'react-waypoint';
 
 class Home extends React.Component {
@@ -32,6 +33,7 @@ class Home extends React.Component {
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}/>
         <Resume/>
+        <VideoFeed />
       </div>
     )
   }

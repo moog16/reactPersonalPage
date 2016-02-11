@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactIcon from '../AboutMe/ContactIcon';
+import ContactIcon from './ContactIcon';
 import Waypoint from 'react-waypoint';
 import _ from 'lodash';
 

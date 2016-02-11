@@ -1,5 +1,4 @@
 import React from 'react';
-import YouTubeFeed from './YouTubeFeed';
 import Specialties from './Specialties';
 
 class BlueDoor extends React.Component {

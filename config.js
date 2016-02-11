@@ -19,6 +19,8 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "classnames": "npm:classnames@2.2.1",
     "core-js": "npm:core-js@1.2.6",
+    "fetch": "github:github/fetch@0.11.0",
+    "immutable": "npm:immutable@3.7.6",
     "jquery": "github:components/jquery@2.1.4",
     "lodash": "npm:lodash@3.10.1",
     "react": "npm:react@0.14.3",
