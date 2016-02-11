@@ -5,3 +5,4 @@ bin/**/*
 bundle.js
 .idea
 .sass-cache
+.idea/workspace.xml
