@@ -1,10 +1,12 @@
-div[class^="cover--"] {
+div[class^="cover--"],
+%cover-base {
   @include vendor(background-size, cover);
   @include vendor(background-attachment, fixed);
   height: 100vh;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
 .cover__header {
   left: 0;
   right: 0;
@@ -15,10 +17,15 @@ div[class^="cover--"] {
   }
 }
 
-.cover--explorer {
-  background-image: url('../img/explorer.jpg');
+%cover-background {
   position: fixed;
   z-index: -10;
+}
+
+.cover--explorer {
+  background-image: url('../img/explorer.jpg');
+  @extend %cover-base;
+  @extend %cover-background;
 }
 
 .cover--blue-door {
@@ -29,6 +36,12 @@ div[class^="cover--"] {
   @include media-query(palm) {
     background-position-x: -100px;
   };
+}
+
+.cover--bridge {
+  background-image: url('../img/ggb.jpg');
+  @extend %cover-base;
+  @extend %cover-background;
 }
 
 /******** generic background classes ********/
@@ -43,6 +56,10 @@ div[class^="cover--"] {
 
 .bg--color-opaque {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg--color-opaque--white {
+  background-color: rgba(white, 0.3);
 }
 
 .bg--color-white {

@@ -732,7 +732,9 @@ a {
   border-radius: 150px;
   overflow: hidden; }
 
-div[class^="cover--"] {
+div[class^="cover--"],
+.cover--explorer,
+.cover--bridge {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -755,10 +757,12 @@ div[class^="cover--"] {
   .cover__header h1 {
     font-size: 7rem; }
 
-.cover--explorer {
-  background-image: url("../img/explorer.jpg");
+.cover--explorer, .cover--bridge {
   position: fixed;
   z-index: -10; }
+
+.cover--explorer {
+  background-image: url("../img/explorer.jpg"); }
 
 .cover--blue-door {
   background-image: url("../img/blue_door.jpg"); }
@@ -768,6 +772,9 @@ div[class^="cover--"] {
   @media screen and (max-width: 44.9375em) {
     .cover--blue-door {
       background-position-x: -100px; } }
+
+.cover--bridge {
+  background-image: url("../img/ggb.jpg"); }
 
 /******** generic background classes ********/
 .bg--color-blue {
@@ -779,11 +786,13 @@ div[class^="cover--"] {
 .bg--color-opaque {
   background-color: rgba(0, 0, 0, 0.3); }
 
+.bg--color-opaque--white {
+  background-color: rgba(255, 255, 255, 0.3); }
+
 .bg--color-white {
   background-color: white; }
 
 .box--grey {
-  background: rgba(255, 255, 255, 0.4);
   border-radius: 3px; }
 
 .border--main {
@@ -798,6 +807,10 @@ div[class^="cover--"] {
 .border--bottom--dashed {
   border-bottom-style: dashed; }
 
+.footer {
+  height: 120px;
+  background: #FF9311; }
+
 .image--smile {
   position: relative;
   top: -100px;
@@ -808,28 +821,11 @@ div[class^="cover--"] {
   top: -145px;
   width: 343px; }
 
-.timeline {
-  height: 100%;
-  position: relative;
-  margin-top: 0; }
-  .timeline::before {
-    content: '';
-    border: 3px dashed #FFF1CE;
-    height: 100%;
-    position: absolute;
-    left: 50%; }
+.resume-image {
+  max-width: 300px; }
 
-.timeline__content {
-  position: relative; }
-  .timeline__content::before {
-    content: '';
-    display: block;
-    width: 81px;
-    height: 1px;
-    border: 3px dashed #FFF1CE;
-    position: absolute;
-    top: 50%;
-    left: 284px; }
+.youtube-video {
+  height: 250px; }
 
 /*------------------------------------*    #WIDTHS
 \*------------------------------------*/
@@ -4464,6 +4460,9 @@ div[class^="cover--"] {
 
 .relative {
   position: relative; }
+
+.absolute {
+  position: absolute; }
 
 .fixed {
   position: fixed; }

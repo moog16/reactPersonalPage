@@ -5,6 +5,7 @@ import BlueDoor from './BlueDoor';
 import Resume from './Resume';
 import VideoFeed from './VideoFeed';
 import Waypoint from 'react-waypoint';
+import classnames from 'classnames';
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,14 +13,21 @@ class Home extends React.Component {
     this.state = {
       isShowingAboutMeContainer: props.isShowingAboutMeContainer,
       scrollPos: props.scrollPos,
-      shouldHideNameHeader: false
+      shouldHideNameHeader: false,
+      isShowingVideoFeed: false
     };
   }
 
   render() {
+
+    const backgroundClasses = classnames(['full-page', {
+      'cover--bridge': this.state.isShowingVideoFeed,
+      'cover--explorer': !this.state.isShowingVideoFeed
+    }]);
+
     return  (
       <div>
-        <div className='cover--explorer full-page'></div>
+        <div className={backgroundClasses}></div>
         <Splash
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}
@@ -33,7 +41,14 @@ class Home extends React.Component {
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}/>
         <Resume/>
+        <Waypoint
+          onEnter={this._scrollVideoFeedEnter.bind(this)}
+          onLeave={this._scrollVideoFeedLeave.bind(this)}
+          threshold={1.5} />
         <VideoFeed />
+        <div className='footer'>
+
+        </div>
       </div>
     )
   }
@@ -44,6 +59,14 @@ class Home extends React.Component {
 
   _scrollSplashLeave() {
     this.setState({isShowingAboutMeContainer: false});
+  }
+
+  _scrollVideoFeedEnter() {
+    this.setState({isShowingVideoFeed: true});
+  }
+
+  _scrollVideoFeedLeave() {
+    this.setState({isShowingVideoFeed: false});
   }
 
   componentDidMount() {

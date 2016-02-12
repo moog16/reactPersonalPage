@@ -1,7 +1,7 @@
 import React from 'react';
 import { fromJS } from 'immutable';
 
-const youtubeUrl = 'https://www.youtube.com/watch?v=';
+const youtubeBaseUrl = 'https://www.youtube.com/embed/';
 
 class VideoFeed extends React.Component {
   constructor(props) {
@@ -20,7 +20,6 @@ class VideoFeed extends React.Component {
     }).then((response) => {
       response.json().then((data) => {
         const playlistItems = data.items;
-        console.log(playlistItems)
         this.setState({videos: fromJS(playlistItems)});
       });
     });
@@ -30,24 +29,29 @@ class VideoFeed extends React.Component {
     const videos = this.state.videos;
     return  (
       <div>
-        <div className='half-page bg--color-red u-p++ palm-p+ text--center'>
-          <div className='layout'>
-            {
-              videos.size ? videos.map(video => {
-                return (<div className='layout__item u-1/3 u-1/2-lap u-1/1-palm' key={video.get('id')}>
-                  {video}
-                </div>)
-              }, this) : null
-            }
-          </div>
-        </div>
+        {
+          videos.size ?
+          <div className='u-p++ u-p-palm text--center'>
+            <div className='layout u-p u-pl0 bg--color-opaque--white'>
+              <h2 className="u-mb+">
+                Some Videos of My Life :)
+              </h2>
+              {
+                videos.map(video => {
+                  return (<div className='layout__item u-1/3 u-1/2-lap u-1/1-palm' key={video.get('id')}>
+                    <iframe className="youtube-video u-1/1" src={`${youtubeBaseUrl}${video.getIn(['contentDetails', 'videoId'])}`}></iframe>
+                  </div>)
+                }, this)
+              }
+            </div>
+          </div> : null
+        }
       </div>
     )
   }
 
 
 };
-
 VideoFeed.propTypes = {
 };
 VideoFeed.defaultProps = {

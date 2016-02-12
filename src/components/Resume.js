@@ -4,7 +4,7 @@ class Resume extends React.Component{
   render() {
     return (
       <div className="u-1/1 bg--color-white">
-        <div className="u-p section">
+        <div className="u-p u-pb++ section">
           <h2 className="text--center">
             Resume
           </h2>
@@ -18,7 +18,7 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img src="bin/static/img/logos/points_logo.jpg" />
+            <img className="resume-image" src="bin/static/img/logos/points_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Development Engineer
@@ -33,7 +33,7 @@ class Resume extends React.Component{
           </div>
 
           <div className="u-mb+">
-            <img src="bin/static/img/logos/switchfly_logo.jpg" />
+            <img className="resume-image" src="bin/static/img/logos/switchfly_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Web Developer
@@ -48,7 +48,7 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img src="bin/static/img/logos/dg_logo.png" />
+            <img className="resume-image" src="bin/static/img/logos/dg_logo.png" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Electrical Engineer
