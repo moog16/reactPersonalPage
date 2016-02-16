@@ -1,5 +1,4 @@
 import React from 'react';
-import Specialties from './Specialties';
 
 class BlueDoor extends React.Component {
   render() {

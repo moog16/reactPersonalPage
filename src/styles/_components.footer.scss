@@ -1,4 +1,11 @@
+$footer-background-color: #979797;
 .footer {
-  height: 120px;
-  background: $orange;
+  height: 65px;
+  background: $footer-background-color;
+  text-align: center;
+
+  h6 {
+    @extend .u-p-;
+    color: darken($footer-background-color, 20%);
+  }
 }

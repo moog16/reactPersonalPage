@@ -15,7 +15,7 @@ class AboutMe extends React.Component {
   }
   render() {
     return  (
-      <div className='half-page bg--color-red u-p++ palm-p+ text--center text--medium text--color-white'>
+      <div className='half-page bg--color-red u-p++ palm-p text--center text--medium text--color-white'>
         <Waypoint
           onEnter={this._scrollAboutMeEnter.bind(this)}
           threshold={1} />
@@ -34,6 +34,14 @@ class AboutMe extends React.Component {
             <ContactIcon icon="twitter"
                          link="https://twitter.com/moog16"
                          hide={this.state.hideIcon3} />
+            <ContactIcon icon="tumblr"
+                         text="cooking"
+                         link="https://52dinners.tumblr.com/"
+                         hide={this.state.hideIcon4} />
+            <ContactIcon icon="medium"
+                         text="tech"
+                         link="https://medium.com/@moog16"
+                         hide={this.state.hideIcon5} />
           </div>
         </div>
       </div>
@@ -44,7 +52,7 @@ class AboutMe extends React.Component {
     if(this.state.isShowingIcons) {
       return;
     }
-    _.forEach([1,2,3], (num) => {
+    _.forEach([1,2,3,4], (num) => {
       _.delay(() => {
         let icon = `hideIcon${num}`;
         let state = {isShowingIcons: true};
@@ -53,8 +61,6 @@ class AboutMe extends React.Component {
       }, num*300);
     });
   }
-
-
 
 };
 

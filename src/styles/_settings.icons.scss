@@ -23,6 +23,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-mail:before {
     content: "\e900";
 }
@@ -37,4 +38,10 @@
 }
 .icon-linkedin:before {
     content: "\e904";
+}
+.icon-tumblr:before {
+    content: "\e905";
+}
+.icon-medium:before {
+    content: "\e906";
 }

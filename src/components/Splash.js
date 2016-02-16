@@ -7,7 +7,7 @@ class Splash extends React.Component {
     let containerClass = classNames(
       'text--center', 'bg--color-opaque', 'full-page');
     let coverHeaderClass = classNames(
-      'cover__header', 'box--grey', 'bg--color-opaque--white', 'ib', 'u-p', 'fixed', {'hide': this.props.shouldHideNameHeader});
+      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed', {'hide': this.props.shouldHideNameHeader});
 
     let coverHeaderStyle = this._getCoverHeaderStyle();
 

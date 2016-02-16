@@ -2,6 +2,7 @@ import React from 'react';
 import { fromJS } from 'immutable';
 
 const youtubeBaseUrl = 'https://www.youtube.com/embed/';
+const youtubeApiUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId=PLHwBTpKdW82AAYsooGDKrOg9M4iMgCWeU&key=AIzaSyAMk2zwBgr6r1wS3fjSLtOYzTsTi7rpifs';
 
 class VideoFeed extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class VideoFeed extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId=PLHwBTpKdW82AAYsooGDKrOg9M4iMgCWeU&key=AIzaSyAMk2zwBgr6r1wS3fjSLtOYzTsTi7rpifs', {
+    fetch(youtubeApiUrl, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -38,7 +39,7 @@ class VideoFeed extends React.Component {
               </h2>
               {
                 videos.map(video => {
-                  return (<div className='layout__item u-1/3 u-1/2-lap u-1/1-palm' key={video.get('id')}>
+                  return (<div className='layout__item u-1/2 u-1/2-lap u-1/1-palm' key={video.get('id')}>
                     <iframe className="youtube-video u-1/1" src={`${youtubeBaseUrl}${video.getIn(['contentDetails', 'videoId'])}`}></iframe>
                   </div>)
                 }, this)

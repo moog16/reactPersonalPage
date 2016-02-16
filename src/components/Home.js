@@ -16,10 +16,25 @@ class Home extends React.Component {
       shouldHideNameHeader: false,
       isShowingVideoFeed: false
     };
+    this.fetchTumblrPosts();
+  }
+
+  fetchTumblrPosts() {
+    fetch('http://52dinners.tumblr.com/api/read/json', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      response.json().then((data) => {
+        debugger
+        const playlistItems = data.items;
+        this.setState({videos: fromJS(playlistItems)});
+      });
+    });
   }
 
   render() {
-
     const backgroundClasses = classnames(['full-page', {
       'cover--bridge': this.state.isShowingVideoFeed,
       'cover--explorer': !this.state.isShowingVideoFeed
@@ -47,7 +62,9 @@ class Home extends React.Component {
           threshold={1.5} />
         <VideoFeed />
         <div className='footer'>
-
+          <h6>
+            Proudly developing since 2009
+          </h6>
         </div>
       </div>
     )
