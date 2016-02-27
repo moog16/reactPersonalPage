@@ -1,6 +1,7 @@
 
 `npm install`
 `bower install`
-`grunt serve`
+`jspm i`
+`gulp`
 
 you get my app!
