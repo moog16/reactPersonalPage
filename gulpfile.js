@@ -18,7 +18,8 @@ gulp.task('connect', () => {
       return [
         connect().use(
           proxyMiddleware(['/v1'], {target: 'http://127.0.0.1:3001'})
-        )
+        ),
+        connect().use('/img', connect.static('./bin/static/img'))
       ];
     }
   });
@@ -26,10 +27,15 @@ gulp.task('connect', () => {
 
 gulp.task('template', () => {
   const templateData = { isProd };
-  gulp.src('index.hbs')
+  const indexStream = gulp.src('index.hbs')
     .pipe(handlebars(templateData))
     .pipe(rename('index.html'))
-    .pipe(gulp.dest(`bin/static`));
+
+  if(isProd) {
+    indexStream.pipe(gulp.dest('bin/static'));
+  } else {
+    indexStream.pipe(gulp.dest('./'));
+  }
 });
 
 gulp.task('sass', () => {

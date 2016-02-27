@@ -18,7 +18,7 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img className="resume-image" src="bin/static/img/logos/points_logo.jpg" />
+            <img className="resume-image" src="img/logos/points_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Development Engineer
@@ -27,13 +27,13 @@ class Resume extends React.Component{
                 April 2015 - Present
               </div>
               <p>
-                At Points I've been working on our two consumer sites <a href="http://points.com">Points.com</a>, a loyalty program wallet and <a href="https://pointshound.com">Pointshound.com</a>, a hotel booking site where you earn miles. My main responsibilities include all aspects of maintaining, building, and architecting the frontend of these two sites. Most recently I have been learning iOS to build expand our reach to mobile users and compliment our product.
+                At Points I've been working on our two consumer sites <a href="https://points.com">Points.com</a>, a loyalty program wallet and <a href="https://pointshound.com">Pointshound.com</a>, a hotel booking site where you earn miles. My main responsibilities include all aspects of maintaining, building, and architecting the frontend of these two sites. Most recently I have been learning iOS to build expand our reach to mobile users and compliment our product.
               </p>
             </div>
           </div>
 
           <div className="u-mb+">
-            <img className="resume-image" src="bin/static/img/logos/switchfly_logo.jpg" />
+            <img className="resume-image" src="img/logos/switchfly_logo.jpg" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Web Developer
@@ -48,7 +48,7 @@ class Resume extends React.Component{
           </div>
 
           <div>
-            <img className="resume-image" src="bin/static/img/logos/dg_logo.png" />
+            <img className="resume-image" src="img/logos/dg_logo.png" />
             <div className="u-pl">
               <h4 className="u-mv0">
                 Electrical Engineer
