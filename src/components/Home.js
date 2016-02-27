@@ -16,22 +16,8 @@ class Home extends React.Component {
       shouldHideNameHeader: false,
       isShowingVideoFeed: false
     };
-    this.fetchTumblrPosts();
-  }
 
-  fetchTumblrPosts() {
-    fetch('http://52dinners.tumblr.com/api/read/json', {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      response.json().then((data) => {
-        debugger
-        const playlistItems = data.items;
-        this.setState({videos: fromJS(playlistItems)});
-      });
-    });
+    //TODO: this.fetchTumblrPosts();
   }
 
   render() {

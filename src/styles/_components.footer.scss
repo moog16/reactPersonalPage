@@ -6,6 +6,7 @@ $footer-background-color: #979797;
 
   h6 {
     @extend .u-p-;
+    @extend .u-mb0;
     color: darken($footer-background-color, 20%);
   }
 }

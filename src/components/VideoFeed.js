@@ -1,9 +1,6 @@
 import React from 'react';
 import { fromJS } from 'immutable';
 
-const youtubeBaseUrl = 'https://www.youtube.com/embed/';
-const youtubeApiUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId=PLHwBTpKdW82AAYsooGDKrOg9M4iMgCWeU&key=AIzaSyAMk2zwBgr6r1wS3fjSLtOYzTsTi7rpifs';
-
 class VideoFeed extends React.Component {
   constructor(props) {
     super(props);
@@ -13,16 +10,8 @@ class VideoFeed extends React.Component {
   }
 
   componentDidMount() {
-    fetch(youtubeApiUrl, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      response.json().then((data) => {
-        const playlistItems = data.items;
-        this.setState({videos: fromJS(playlistItems)});
-      });
+    fetch('/v1/youtube').then(res => {
+      res.json().then( videos => this.setState({videos: fromJS(videos)}) );
     });
   }
 
@@ -32,18 +21,21 @@ class VideoFeed extends React.Component {
       <div>
         {
           videos.size ?
-          <div className='u-p++ u-p-palm text--center'>
-            <div className='layout u-p u-pl0 bg--color-opaque--white'>
-              <h2 className="u-mb+">
+          <div className='u-p section'>
+            <div className='bg--color-opaque--white'>
+              <h2 className="u-mb u-p">
                 Some Videos of My Life :)
               </h2>
-              {
-                videos.map(video => {
-                  return (<div className='layout__item u-1/2 u-1/2-lap u-1/1-palm' key={video.get('id')}>
-                    <iframe className="youtube-video u-1/1" src={`${youtubeBaseUrl}${video.getIn(['contentDetails', 'videoId'])}`}></iframe>
-                  </div>)
-                }, this)
-              }
+              <div className='layout layout--small u-p'>
+                {
+                  videos.map(video => {
+                    return (<div className='layout__item u-1/2 u-1/2-lap u-1/1-palm' key={video.get('id')}>
+                      <iframe className="youtube-video u-1/1" src={video.get('url')}></iframe>
+                    </div>)
+                  }, this)
+                }
+              </div>
+
             </div>
           </div> : null
         }

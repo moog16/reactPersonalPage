@@ -2156,7 +2156,7 @@ div[class^="cover--"],
 .u-mr0 {
   margin-right: 0 !important; }
 
-.u-mb0 {
+.u-mb0, .footer h6 {
   margin-bottom: 0 !important; }
 
 .u-ml0 {
