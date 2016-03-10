@@ -7,3 +7,5 @@ bundle.js
 .idea
 .sass-cache
 .idea/workspace.xml
+jspm_packages
+jspm_package/.dependencies.json

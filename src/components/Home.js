@@ -15,8 +15,6 @@ class Home extends React.Component {
       scrollPos: props.scrollPos,
       isShowingVideoFeed: false
     };
-
-    //TODO: this.fetchTumblrPosts();
   }
 
   render() {
@@ -80,7 +78,6 @@ class Home extends React.Component {
 
   handleScroll(event) {
     var scrollTop = event.srcElement.body.scrollTop;
-
     if(!this.state.isShowingAboutMeContainer) {
       return;
     }

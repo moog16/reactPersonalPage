@@ -33,12 +33,6 @@ div[class^="cover--"],
 
 .cover--blue-door {
   background-image: url('../img/blue_door.jpg');
-  @include media-query(lap) {
-    background-position-x: -50px;
-  };
-  @include media-query(palm) {
-    background-position-x: -100px;
-  };
 }
 
 .cover--bridge {

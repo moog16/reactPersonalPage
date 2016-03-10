@@ -25,6 +25,7 @@ System.config({
     "lodash": "npm:lodash@3.10.1",
     "react": "npm:react@0.14.3",
     "react-dom": "npm:react-dom@0.14.3",
+    "react-intl": "npm:react-intl@1.2.2",
     "react-router": "npm:react-router@1.0.3",
     "react-waypoint": "npm:react-waypoint@1.1.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -121,6 +122,12 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:intl-messageformat@1.1.0": {
+      "intl-messageformat-parser": "npm:intl-messageformat-parser@1.1.0"
+    },
+    "npm:intl-relativeformat@1.1.0": {
+      "intl-messageformat": "npm:intl-messageformat@1.1.0"
+    },
     "npm:invariant@2.2.0": {
       "loose-envify": "npm:loose-envify@1.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -158,6 +165,13 @@ System.config({
     "npm:react-dom@0.14.3": {
       "react": "npm:react@0.14.3"
     },
+    "npm:react-intl@1.2.2": {
+      "intl-format-cache": "npm:intl-format-cache@2.0.5",
+      "intl-messageformat": "npm:intl-messageformat@1.1.0",
+      "intl-relativeformat": "npm:intl-relativeformat@1.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "react": "npm:react@0.13.3"
+    },
     "npm:react-router@1.0.3": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -169,6 +183,11 @@ System.config({
     "npm:react-waypoint@1.1.3": {
       "react": "npm:react@0.14.3",
       "react-dom": "npm:react-dom@0.14.3"
+    },
+    "npm:react@0.13.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "envify": "npm:envify@3.4.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react@0.14.3": {
       "envify": "npm:envify@3.4.0",

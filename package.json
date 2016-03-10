@@ -25,6 +25,7 @@
       "lodash": "npm:lodash@^3.10.1",
       "react": "npm:react@^0.14.3",
       "react-dom": "npm:react-dom@^0.14.3",
+      "react-intl": "npm:react-intl@^1.2.2",
       "react-router": "npm:react-router@^1.0.3",
       "react-waypoint": "npm:react-waypoint@^1.1.3"
     },

@@ -31,7 +31,7 @@ class Splash extends React.Component {
     var vertTranslation = 0;
 
     if(this.props.isShowingAboutMeContainer || this.props.scrollPos > 900) {
-      vertTranslation = 200-this.props.scrollPos;
+      vertTranslation = 90-this.props.scrollPos;
     }
     return {
       msTransform: `translate(0 ,${vertTranslation}px)`, /* IE 9 */
