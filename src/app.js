@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Route, Router} from 'react-router';
+import {Route, Router, browserHistory} from 'react-router';
 import Home from './components/Home';
 
 const routes = (
@@ -8,7 +8,7 @@ const routes = (
 );
 
 ReactDOM.render((
-  <Router>
+  <Router history={browserHistory}>
     {routes}
   </Router>
   ), document.getElementById('app')

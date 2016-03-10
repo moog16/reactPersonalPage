@@ -26,7 +26,7 @@ System.config({
     "moment": "npm:moment@2.12.0",
     "react": "npm:react@0.14.3",
     "react-dom": "npm:react-dom@0.14.3",
-    "react-router": "npm:react-router@1.0.3",
+    "react-router": "npm:react-router@2.0.1",
     "react-waypoint": "npm:react-waypoint@1.1.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -110,19 +110,17 @@ System.config({
       "ua-parser-js": "npm:ua-parser-js@0.7.10",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
     },
-    "npm:history@1.17.0": {
-      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+    "npm:history@2.0.1": {
       "deep-equal": "npm:deep-equal@1.0.1",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "invariant": "npm:invariant@2.2.0",
+      "invariant": "npm:invariant@2.2.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "query-string": "npm:query-string@3.0.0",
+      "query-string": "npm:query-string@3.0.1",
       "warning": "npm:warning@2.1.0"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:invariant@2.2.0": {
+    "npm:invariant@2.2.1": {
       "loose-envify": "npm:loose-envify@1.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -156,17 +154,15 @@ System.config({
       "asap": "npm:asap@2.0.3",
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
-    "npm:query-string@3.0.0": {
-      "strict-uri-encode": "npm:strict-uri-encode@1.0.2"
+    "npm:query-string@3.0.1": {
+      "strict-uri-encode": "npm:strict-uri-encode@1.1.0"
     },
     "npm:react-dom@0.14.3": {
       "react": "npm:react@0.14.3"
     },
-    "npm:react-router@1.0.3": {
-      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "history": "npm:history@1.17.0",
-      "invariant": "npm:invariant@2.2.0",
+    "npm:react-router@2.0.1": {
+      "history": "npm:history@2.0.1",
+      "invariant": "npm:invariant@2.2.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "warning": "npm:warning@2.1.0"
     },
