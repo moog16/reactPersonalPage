@@ -30,6 +30,11 @@
   color: $grey;
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .text--medium {
   font-size: 1.5rem;

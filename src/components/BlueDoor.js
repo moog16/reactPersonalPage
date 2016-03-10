@@ -1,6 +1,6 @@
 import React from 'react';
 import { fromJS } from 'immutable';
-import { FormattedDate } from 'react-intl';
+import moment from 'moment';
 
 class BlueDoor extends React.Component {
   constructor(props) {
@@ -31,24 +31,22 @@ class BlueDoor extends React.Component {
                 <h2 className="u-mv0">
                   I love to cook!
                 </h2>
-                <a className='' href={blog.getIn(['blog', 'url'])}>
+                <a className='bg--color-opaque--white-7' href={blog.getIn(['blog', 'url'])}>
                   {blog.getIn(['blog', 'title'])}
                 </a>
-                <div className='layout layout--small u-p'>
+                <div className='layout layout--small'>
                   {
                     posts.map(post => {
-                      return (<div className='layout__item u-1/2 u-1/2-lap u-1/1-palm' key={post.get('id')}>
-                        <div className='bg--color-opaque--white'>
+                      return (<div className='layout__item u-9/12 u-1/1-palm u-mt' key={post.get('id')}>
+                        <div className='bg--color-opaque--white-7 u-p'>
                           <a href={post.get('post_url')}>
                             {post.get('title')}
                           </a>
-                          <FormattedDate
-                            value={post.get('date')}
-                            day="numeric"
-                            month="short"
-                            year="numeric" />
                           <div>
-                            {post.get('body').substring(0, 75)}
+                            {moment(post.get('date')).format('ll')}
+                          </div>
+                          <div className='ellipsis'>
+                            {post.get('body')}
                           </div>
                         </div>
                       </div>)
