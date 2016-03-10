@@ -13,7 +13,6 @@ class Home extends React.Component {
     this.state = {
       isShowingAboutMeContainer: props.isShowingAboutMeContainer,
       scrollPos: props.scrollPos,
-      shouldHideNameHeader: false,
       isShowingVideoFeed: false
     };
 
@@ -31,13 +30,12 @@ class Home extends React.Component {
         <div className={backgroundClasses}></div>
         <Splash
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
-          scrollPos={this.state.scrollPos}
-          shouldHideNameHeader={this.state.shouldHideNameHeader}/>
+          scrollPos={this.state.scrollPos} />
         <AboutMe />
         <Waypoint
           onEnter={this._scrollSplashEnter.bind(this)}
           onLeave={this._scrollSplashLeave.bind(this)}
-          threshold={0.2} />
+          threshold={0.8} />
         <BlueDoor
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
           scrollPos={this.state.scrollPos}/>
@@ -82,11 +80,6 @@ class Home extends React.Component {
 
   handleScroll(event) {
     var scrollTop = event.srcElement.body.scrollTop;
-    var shouldHideNameHeader = false;
-    if(scrollTop > window.innerHeight) {
-      shouldHideNameHeader = true;
-    }
-    this.setState({shouldHideNameHeader: shouldHideNameHeader});
 
     if(!this.state.isShowingAboutMeContainer) {
       return;

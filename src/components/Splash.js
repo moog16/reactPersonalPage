@@ -7,7 +7,7 @@ class Splash extends React.Component {
     let containerClass = classNames(
       'text--center', 'bg--color-opaque', 'full-page');
     let coverHeaderClass = classNames(
-      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed', {'hide': this.props.shouldHideNameHeader});
+      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed');
 
     let coverHeaderStyle = this._getCoverHeaderStyle();
 
@@ -43,13 +43,11 @@ class Splash extends React.Component {
 
 Splash.propTypes = {
   isShowingAboutMeContainer: React.PropTypes.bool,
-  scrollPos: React.PropTypes.number,
-  shouldHideNameHeader: React.PropTypes.bool
+  scrollPos: React.PropTypes.number
 };
 Splash.defaultProps = {
   isShowingAboutMeContainer: false,
-  scrollPos: 0,
-  shouldHideNameHeader: true
+  scrollPos: 0
 };
 
 export default Splash;
