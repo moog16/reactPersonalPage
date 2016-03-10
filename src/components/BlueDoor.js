@@ -18,6 +18,12 @@ class BlueDoor extends React.Component {
     });
   }
 
+  stripHtml(post) {
+    var tempDiv = document.createElement('div');
+    tempDiv.innerHTML = post;
+    return tempDiv.textContent || tempDiv.innerText || "";
+  }
+
   render() {
     const blog = this.state.blog;
     const posts = blog && blog.size && blog.get('posts');
@@ -31,7 +37,7 @@ class BlueDoor extends React.Component {
                 <h2 className="u-mv0">
                   I love to cook!
                 </h2>
-                <a className='bg--color-opaque--white-7' href={blog.getIn(['blog', 'url'])}>
+                <a className='bg--color-opaque--white-7 u-p--' href={blog.getIn(['blog', 'url'])}>
                   {blog.getIn(['blog', 'title'])}
                 </a>
                 <div className='layout layout--small'>
@@ -39,14 +45,14 @@ class BlueDoor extends React.Component {
                     posts.map(post => {
                       return (<div className='layout__item u-9/12 u-1/1-palm u-mt' key={post.get('id')}>
                         <div className='bg--color-opaque--white-7 u-p'>
-                          <a href={post.get('post_url')}>
+                          <a href={post.get('post_url')} className='text--heavy'>
                             {post.get('title')}
                           </a>
                           <div>
                             {moment(post.get('date')).format('ll')}
                           </div>
                           <div className='ellipsis'>
-                            {post.get('body')}
+                            {this.stripHtml(post.get('body'))}
                           </div>
                         </div>
                       </div>)
