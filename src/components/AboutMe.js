@@ -21,7 +21,7 @@ class AboutMe extends React.Component {
           threshold={1} />
         <div className='section'>
           <div>
-            I am a web developer with a passion for building simple and elegant frontend apps that make everyday life easier. I believe technology streamlines mundane chores and errands, makes the impossible possible, and will change the lives of many.
+            I am a web developer with a passion for building simple and elegant apps that make everyday life easier. I believe technology can streamline your day, make the impossible possible, and can change the lives of many.
           </div>
           <div className='layout u-mt+'>
             {this.state.hideIcon1}
@@ -34,14 +34,10 @@ class AboutMe extends React.Component {
             <ContactIcon icon="twitter"
                          link="https://twitter.com/moog16"
                          hide={this.state.hideIcon3} />
-            <ContactIcon icon="tumblr"
-                         text="cooking"
-                         link="https://52dinners.tumblr.com/"
-                         hide={this.state.hideIcon4} />
             <ContactIcon icon="medium"
                          text="tech"
                          link="https://medium.com/@moog16"
-                         hide={this.state.hideIcon5} />
+                         hide={this.state.hideIcon4} />
           </div>
         </div>
       </div>
