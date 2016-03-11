@@ -1,6 +1,7 @@
+$header-font-family: 'MissionScript';
 @font-face {
-  font-family: 'Lobster';
-  src: url("../fonts/LobsterRegular.ttf") format("truetype");
+  font-family: $header-font-family;
+  src: url("../fonts/MissionScript/Mission-Script.otf") format("opentype");
   font-weight: 400;
 }
 
