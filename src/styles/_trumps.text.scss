@@ -50,12 +50,6 @@
   };
 }
 
-.text--normal--narrow {
-  @include media-query(narrow) {
-    font-size: 1rem;
-  };
-}
-
 .text--huge {
   font-size: 5rem;
 }

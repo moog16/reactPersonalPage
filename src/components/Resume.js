@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Resume extends React.Component{
+export default class Resume extends React.Component{
   render() {
     return (
       <div className="u-1/1 bg--color-white">
@@ -66,5 +66,3 @@ class Resume extends React.Component{
     )
   }
 };
-
-export default Resume;

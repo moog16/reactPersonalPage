@@ -1,22 +1,13 @@
 import React from 'react';
 import { fromJS } from 'immutable';
 
-class VideoFeed extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      videos: []
-    }
-  }
-
+export default class VideoFeed extends React.Component {
   componentDidMount() {
-    fetch('/v1/youtube').then(res => {
-      res.json().then( videos => this.setState({videos: fromJS(videos)}) );
-    });
+    this.props.fetchYoutubeVideos();
   }
 
   render() {
-    const videos = this.state.videos;
+    const videos = this.props.videos;
     return  (
       <div>
         {
@@ -42,12 +33,4 @@ class VideoFeed extends React.Component {
       </div>
     )
   }
-
-
 };
-VideoFeed.propTypes = {
-};
-VideoFeed.defaultProps = {
-};
-
-export default VideoFeed;

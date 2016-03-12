@@ -6,6 +6,9 @@ import Resume from './Resume';
 import VideoFeed from './VideoFeed';
 import Waypoint from 'react-waypoint';
 import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchYoutubeVideos } from '../action-creators/action-creators';
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,6 +25,8 @@ class Home extends React.Component {
       'cover--bridge': this.state.isShowingVideoFeed,
       'cover--explorer': !this.state.isShowingVideoFeed
     }]);
+
+    const { videos } = this.props;
 
     return  (
       <div>
@@ -42,7 +47,9 @@ class Home extends React.Component {
           onEnter={this._scrollVideoFeedEnter.bind(this)}
           onLeave={this._scrollVideoFeedLeave.bind(this)}
           threshold={1.5} />
-        <VideoFeed />
+        <VideoFeed
+          fetchYoutubeVideos={this.props.fetchYoutubeVideos}
+          videos={videos}  />
         <div className='footer'>
           <h6>
             Proudly developing since 2009
@@ -86,4 +93,17 @@ class Home extends React.Component {
   }
 };
 
-export default Home;
+function mapStateToProps(state) {
+  return {
+    videos: state.get('videos')
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    fetchYoutubeVideos
+  }, dispatch);
+};
+
+
+export const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
