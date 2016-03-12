@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Router, browserHistory} from 'react-router';
 import { HomeContainer } from './components/Home';
-import fetch from 'fetch';
 import { createStore, applyMiddleware } from 'redux'
 import { connect, Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers/reducers';
+import fetch from 'fetch';
 
 const middleware = [thunk];
 const store = createStore(
