@@ -22,7 +22,7 @@ class BlueDoor extends React.Component {
           {
             posts && posts.size ?
             <div className='section'>
-              <div className='u-p'>
+              <div className='u-p u-pt++'>
                 <h1 className="u-mv0">
                   I love to cook!
                 </h1>
@@ -33,8 +33,8 @@ class BlueDoor extends React.Component {
                   {
                     posts.map(post => {
                       return (<div className='layout__item u-9/12 u-1/1-palm u-mt' key={post.get('id')}>
-                        <div className='bg--color-opaque--white-7 u-p'>
-                          <a target="_blank" href={post.get('post_url')} className='text--heavy link--color-black'>
+                        <div className='content-row u-p'>
+                          <a target="_blank" href={post.get('post_url')} className='text--heavy text--color-black'>
                             <h4 className='u-mt0 u-mb- u-p0'>
                               {post.get('title')}
                             </h4>

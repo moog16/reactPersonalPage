@@ -1,11 +1,4 @@
 .youtube-video {
-  background-color: rgba(white, 0.5);
-  @include vendor(transition, background-color 0.4s);
-  iframe {
-    height: 100px;
-  }
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(white, 0.9);
-  }
+  height: 100px;
+  margin-bottom: -8px;
 }

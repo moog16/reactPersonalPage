@@ -1,0 +1,8 @@
+.content-row {
+  background-color: rgba(white, 0.5);
+  @include vendor(transition, background-color 0.4s);
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(white, 0.9);
+  }
+}

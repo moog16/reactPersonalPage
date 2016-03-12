@@ -1,27 +1,56 @@
 import React from 'react';
 import classnames from 'classnames';
+import Waypoint from 'react-waypoint';
 
 export default class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isShowingHeader: true
+    }
+  }
 
   render() {
-    const containerClass = classnames(
-      'text--center', 'bg--color-opaque', 'full-page');
+    const isShowingHeader = this.state.isShowingHeader;
+    const coverContainerClass = classnames(
+      'cover__header', 'ib', 'u-1/1',
+      {
+         'u-p': isShowingHeader,
+         'u-p--': !isShowingHeader,
+        'fixed': !isShowingHeader
+      });
     const coverHeaderClass = classnames(
-      'cover__header', 'box--grey', 'ib', 'u-p', 'u-1/1');
+      'ib', 'u-ph+', 'palm-ph-', {
+        'border--bottom': isShowingHeader,
+        'border--thick': isShowingHeader
+      }
+    )
 
     return  (
-      <div className={containerClass}>
-        <div className={coverHeaderClass}>
-          <div className='border--bottom border--thick ib u-ph+ palm-ph-'>
-            <h1 className='u-m0'>
+      <div className={classnames('bg--color-opaque', 'full-page', {'text--center': isShowingHeader})}>
+        <Waypoint
+          onEnter={this._onHeaderEnter.bind(this)}
+          onLeave={this._onHeaderLeave.bind(this)}
+          threshold={0} />
+        <div className={coverContainerClass}>
+          <div className={coverHeaderClass}>
+            <h1 className='u-m0 ib'>
               Matt Goo
             </h1>
           </div>
-          <div className='text--large text--color-blue'>
+          <div className='cover__subheader text--color-blue'>
             Adventurer - Web Developer
           </div>
         </div>
       </div>
     )
+  }
+
+  _onHeaderLeave() {
+    this.setState({isShowingHeader: false});
+  }
+
+  _onHeaderEnter() {
+    this.setState({isShowingHeader: true});
   }
 };

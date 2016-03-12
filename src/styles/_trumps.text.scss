@@ -78,10 +78,3 @@
     color: $link--light-hover;
   }
 }
-
-.link--color-black {
-  color: $black;
-  &:hover {
-    color: lighten($black, 40%);
-  }
-}
