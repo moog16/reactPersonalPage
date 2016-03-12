@@ -1,7 +1,6 @@
 div[class^="cover--"],
 %cover-base {
   @include vendor(background-size, cover);
-  @include vendor(background-attachment, fixed);
   height: 100vh;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -60,7 +59,7 @@ div[class^="cover--"],
 }
 
 .bg--color-opaque--white-7 {
-  background-color: rgba(white, 0.7);  
+  background-color: rgba(white, 0.7);
 }
 
 .bg--color-white {

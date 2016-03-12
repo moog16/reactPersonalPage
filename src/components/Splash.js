@@ -1,15 +1,15 @@
 import React from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 class Splash extends React.Component {
 
   render() {
-    let containerClass = classNames(
+    const containerClass = classnames(
       'text--center', 'bg--color-opaque', 'full-page');
-    let coverHeaderClass = classNames(
+    const coverHeaderClass = classnames(
       'cover__header', 'box--grey', 'ib', 'u-p', 'fixed');
 
-    let coverHeaderStyle = this._getCoverHeaderStyle();
+    const coverHeaderStyle = this._getCoverHeaderStyle();
 
     return  (
       <div className={containerClass}>
