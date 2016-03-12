@@ -14,7 +14,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isShowingAboutMeContainer: props.isShowingAboutMeContainer,
       scrollPos: props.scrollPos,
       isShowingVideoFeed: false
     };
@@ -31,17 +30,9 @@ class Home extends React.Component {
     return  (
       <div>
         <div className={backgroundClasses}></div>
-        <Splash
-          isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
-          scrollPos={this.state.scrollPos} />
+        <Splash />
         <AboutMe />
-        <Waypoint
-          onEnter={this._scrollSplashEnter.bind(this)}
-          onLeave={this._scrollSplashLeave.bind(this)}
-          threshold={0.8} />
         <BlueDoor
-          isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
-          scrollPos={this.state.scrollPos}
           fetchDinnerBlog={this.props.fetchDinnerBlog}
           dinnerBlog={this.props.dinnerBlog} />
         <Resume/>
@@ -61,37 +52,12 @@ class Home extends React.Component {
     )
   }
 
-  _scrollSplashEnter() {
-    this.setState({isShowingAboutMeContainer: true});
-  }
-
-  _scrollSplashLeave() {
-    this.setState({isShowingAboutMeContainer: false});
-  }
-
   _scrollVideoFeedEnter() {
     this.setState({isShowingVideoFeed: true});
   }
 
   _scrollVideoFeedLeave() {
     this.setState({isShowingVideoFeed: false});
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
-  }
-
-  handleScroll(event) {
-    var scrollTop = event.srcElement.body.scrollTop;
-    if(!this.state.isShowingAboutMeContainer) {
-      return;
-    }
-
-    this.setState({scrollPos: scrollTop});
   }
 };
 

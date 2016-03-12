@@ -28,7 +28,7 @@ export default class VideoFeed extends React.Component {
                             <iframe className="u-1/1" frameBorder="0" src={video.get('url')}></iframe>
                           </div>
                           <div className='layout__item u-2/3'>
-                            <span className='text--large'>
+                            <span className='text--medium'>
                               {video.get('title')}
                             </span>
                             <div>

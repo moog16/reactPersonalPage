@@ -1,19 +1,17 @@
 import React from 'react';
 import classnames from 'classnames';
 
-class Splash extends React.Component {
+export default class Splash extends React.Component {
 
   render() {
     const containerClass = classnames(
       'text--center', 'bg--color-opaque', 'full-page');
     const coverHeaderClass = classnames(
-      'cover__header', 'box--grey', 'ib', 'u-p', 'fixed');
-
-    const coverHeaderStyle = this._getCoverHeaderStyle();
+      'cover__header', 'box--grey', 'ib', 'u-p', 'u-1/1');
 
     return  (
       <div className={containerClass}>
-        <div className={coverHeaderClass} style={coverHeaderStyle}>
+        <div className={coverHeaderClass}>
           <div className='border--bottom border--thick ib u-ph+ palm-ph-'>
             <h1 className='u-m0'>
               Matt Goo
@@ -26,28 +24,4 @@ class Splash extends React.Component {
       </div>
     )
   }
-
-  _getCoverHeaderStyle() {
-    var vertTranslation = 0;
-
-    if(this.props.isShowingAboutMeContainer || this.props.scrollPos > 900) {
-      vertTranslation = 90-this.props.scrollPos;
-    }
-    return {
-      msTransform: `translate(0 ,${vertTranslation}px)`, /* IE 9 */
-      WebkitTransition: `translate(0 ,${vertTranslation}px)`, /* Safari */
-      transform: `translate(0 ,${vertTranslation}px)`
-    }
-  }
 };
-
-Splash.propTypes = {
-  isShowingAboutMeContainer: React.PropTypes.bool,
-  scrollPos: React.PropTypes.number
-};
-Splash.defaultProps = {
-  isShowingAboutMeContainer: false,
-  scrollPos: 0
-};
-
-export default Splash;
