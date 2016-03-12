@@ -28,6 +28,7 @@ System.config({
     "react-dom": "npm:react-dom@0.14.3",
     "react-router": "npm:react-router@2.0.1",
     "react-waypoint": "npm:react-waypoint@1.1.3",
+    "whatwg-fetch": "npm:whatwg-fetch@0.11.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
