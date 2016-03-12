@@ -8,7 +8,7 @@ import Waypoint from 'react-waypoint';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchYoutubeVideos } from '../action-creators/action-creators';
+import { fetchYoutubeVideos, fetchDinnerBlog } from '../action-creators/action-creators';
 
 class Home extends React.Component {
   constructor(props) {
@@ -41,7 +41,9 @@ class Home extends React.Component {
           threshold={0.8} />
         <BlueDoor
           isShowingAboutMeContainer={this.state.isShowingAboutMeContainer}
-          scrollPos={this.state.scrollPos}/>
+          scrollPos={this.state.scrollPos}
+          fetchDinnerBlog={this.props.fetchDinnerBlog}
+          dinnerBlog={this.props.dinnerBlog} />
         <Resume/>
         <Waypoint
           onEnter={this._scrollVideoFeedEnter.bind(this)}
@@ -95,13 +97,15 @@ class Home extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    videos: state.get('videos')
+    videos: state.get('videos'),
+    dinnerBlog: state.get('dinnerBlog')
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    fetchYoutubeVideos
+    fetchYoutubeVideos,
+    fetchDinnerBlog
   }, dispatch);
 };
 

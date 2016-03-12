@@ -3,19 +3,8 @@ import { fromJS } from 'immutable';
 import moment from 'moment';
 
 class BlueDoor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      blog: {}
-    };
-
-    this.fetchTumblrPosts();
-  }
-
-  fetchTumblrPosts() {
-    fetch('/v1/tumblr/52dinners').then(res => {
-      res.json().then( blog => this.setState({blog: fromJS(blog)}) );
-    });
+  componentWillMount() {
+    this.props.fetchDinnerBlog();
   }
 
   stripHtml(post) {
@@ -25,7 +14,7 @@ class BlueDoor extends React.Component {
   }
 
   render() {
-    const blog = this.state.blog;
+    const blog = this.props.dinnerBlog;
     const posts = blog && blog.size && blog.get('posts');
     return (
       <div className='full-page'>

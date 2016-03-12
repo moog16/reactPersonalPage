@@ -3,9 +3,9 @@ import ContactIcon from './ContactIcon';
 import Waypoint from 'react-waypoint';
 import _ from 'lodash';
 
-class AboutMe extends React.Component {
-  constructor() {
-    super();
+export default class AboutMe extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       hideIcon1: true,
       hideIcon2: true,
@@ -59,10 +59,3 @@ class AboutMe extends React.Component {
   }
 
 };
-
-AboutMe.propTypes = {
-};
-AboutMe.defaultProps = {
-};
-
-export default AboutMe;

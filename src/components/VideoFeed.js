@@ -1,8 +1,7 @@
 import React from 'react';
-import { fromJS } from 'immutable';
 
 export default class VideoFeed extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchYoutubeVideos();
   }
 
