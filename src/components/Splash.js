@@ -38,7 +38,7 @@ export default class Splash extends React.Component {
               Matt Goo
             </h1>
           </div>
-          <div className='cover__subheader text--color-blue'>
+          <div className={classnames('cover__subheader', 'text--color-blue', {'hide': !isShowingHeader}) }>
             Adventurer - Web Developer
           </div>
         </div>
