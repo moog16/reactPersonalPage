@@ -1,7 +1,6 @@
 node_modules
 bower_components
 index.html
-bin/**/*
 .DS_Store
 .sass-cache
 bundle.js
