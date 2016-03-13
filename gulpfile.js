@@ -6,6 +6,7 @@ const proxyMiddleware  = require('http-proxy-middleware');
 const Builder = require('systemjs-builder');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require("gulp-rename");
+const sassJspm = require('sass-jspm-importer');
 
 var isProd = false;
 
@@ -39,9 +40,11 @@ gulp.task('template', () => {
 });
 
 gulp.task('sass', () => {
-  gulp.src('src/styles/**/*.scss')
+  return gulp.src('src/styles/app.scss')
     .pipe(sass({
-      errLogToConsole: true
+      errLogToConsole: true,
+      functions: sassJspm.resolve_function('/lib/'),
+      importer: sassJspm.importer
     }))
     .pipe(gulp.dest('bin/static/css'))
     .pipe(connect.reload());
@@ -85,7 +88,7 @@ gulp.task('clean', () => {
 
 gulp.task('watch', () => {
   gulp.watch(['./src/**/*.js'], ['js']);
-  gulp.watch(['./src/styles/**/*.scss'], ['sass']);
+  gulp.watch(['./src/styles/**/*.scss', './jspm_packages/npm/inuit-*/**/*.scss'], ['sass']);
   gulp.watch(['./src/assets/images/**/*'], ['copyImages']);
   gulp.watch(['./src/assets/fonts/**/*'], ['copyFontsAndIcons']);
 });

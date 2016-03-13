@@ -1,30 +1,27 @@
 // framework styles
-@import "../../bower_components/inuit-defaults/settings.defaults";
-@import "../../bower_components/inuit-responsive-settings/settings.responsive";
+@import "jspm:inuit-defaults/settings.defaults";
+@import "jspm:inuit-responsive-settings/settings.responsive";
 @import "settings.icons";
 @import "settings.colors";
 @import "settings.fonts";
 
-@import "../../bower_components/inuit-functions/tools.functions";
-@import "../../bower_components/inuit-mixins/tools.mixins";
-@import "../../bower_components/inuit-tools-widths/tools.widths";
-@import "../../bower_components/inuit-responsive-tools/tools.responsive";
+@import "jspm:inuit-functions/tools.functions";
+@import "jspm:inuit-mixins/tools.mixins";
+@import "jspm:inuit-tools-widths/tools.widths";
+@import "jspm:inuit-responsive-tools/tools.responsive";
 @import "tools.mixins";
 
-@import "../../bower_components/inuit-normalize/generic.normalize";
-@import "../../bower_components/inuit-box-sizing/generic.box-sizing";
-
-@import "../../bower_components/inuit-page/base.page";
-@import "../../bower_components/inuit-headings/base.headings";
+@import "jspm:inuit-normalize/generic.normalize";
+@import "jspm:inuit-box-sizing/generic.box-sizing";
+@import "jspm:inuit-page/base.page";
+@import "jspm:inuit-headings/base.headings";
 @import "base.animation.scss";
 @import "base.layout.scss";
 
-@import "../../bower_components/inuit-box/objects.box";
-@import "../../bower_components/inuit-layout/objects.layout";
-@import "../../bower_components/inuit-buttons/objects.buttons";
+@import "jspm:inuit-box/objects.box";
+@import "jspm:inuit-layout/objects.layout";
+@import "jspm:inuit-buttons/objects.buttons";
 @import "objects.circle.scss";
-
-
 
 @import "components.backgrounds.scss";
 @import "components.box.scss";
@@ -35,13 +32,12 @@
 @import "components.resume.scss";
 @import "components.youtube.scss";
 
-
-@import "../../bower_components/inuit-widths/trumps.widths";
-@import "../../bower_components/inuit-widths-responsive/trumps.widths-responsive";
-@import "../../bower_components/inuit-spacing/trumps.spacing";
-@import "../../bower_components/inuit-headings-trumps/trumps.headings";
-@import "../../bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
-@import "../../bower_components/inuit-clearfix/trumps.clearfix";
+@import "jspm:inuit-widths/trumps.widths";
+@import "jspm:inuit-responsive-widths/trumps.widths-responsive";
+@import "jspm:inuit-spacing/trumps.spacing";
+@import "jspm:inuit-headings-trumps/trumps.headings";
+@import "jspm:inuit-responsive-spacing/trumps.spacing-responsive";
+@import "jspm:inuit-clearfix/trumps.clearfix";
 @import "trumps.text.scss";
 @import "trumps.positioning.scss";
 

@@ -21,8 +21,26 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "fetch": "github:github/fetch@0.11.0",
     "immutable": "npm:immutable@3.7.6",
-    "jquery": "github:components/jquery@2.1.4",
-    "lodash": "npm:lodash@3.10.1",
+    "inuit-box": "npm:inuit-box@0.4.4",
+    "inuit-box-sizing": "npm:inuit-box-sizing@0.2.0",
+    "inuit-buttons": "npm:inuit-buttons@0.4.2",
+    "inuit-clearfix": "npm:inuit-clearfix@0.2.2",
+    "inuit-defaults": "npm:inuit-defaults@0.2.3",
+    "inuit-functions": "npm:inuit-functions@0.2.0",
+    "inuit-headings": "npm:inuit-headings@0.3.1",
+    "inuit-headings-trumps": "npm:inuit-headings-trumps@0.1.3",
+    "inuit-layout": "npm:inuit-layout@0.2.2",
+    "inuit-mixins": "npm:inuit-mixins@0.2.3",
+    "inuit-normalize": "npm:inuit-normalize@3.0.3",
+    "inuit-page": "npm:inuit-page@0.2.1",
+    "inuit-responsive-settings": "npm:inuit-responsive-settings@0.1.5",
+    "inuit-responsive-spacing": "npm:inuit-responsive-spacing@0.0.7",
+    "inuit-responsive-tools": "npm:inuit-responsive-tools@0.1.3",
+    "inuit-responsive-widths": "npm:inuit-responsive-widths@0.2.2",
+    "inuit-spacing": "npm:inuit-spacing@0.7.0",
+    "inuit-starter-kit": "npm:inuit-starter-kit@0.2.9",
+    "inuit-tools-widths": "npm:inuit-tools-widths@0.1.4",
+    "inuit-widths": "npm:inuit-widths@0.4.2",
     "moment": "npm:moment@2.12.0",
     "react": "npm:react@0.14.7",
     "react-dom": "npm:react-dom@0.14.3",
@@ -94,11 +112,74 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:inuit-box@0.4.4": {
+      "inuit-clearfix": "npm:inuit-clearfix@0.2.2",
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0"
+    },
+    "npm:inuit-buttons@0.4.2": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0"
+    },
+    "npm:inuit-headings-trumps@0.1.3": {
+      "inuit-headings": "npm:inuit-headings@0.3.1"
+    },
+    "npm:inuit-headings@0.3.1": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-mixins": "npm:inuit-mixins@0.2.3"
+    },
+    "npm:inuit-layout@0.2.2": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0"
+    },
+    "npm:inuit-mixins@0.2.3": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3"
+    },
+    "npm:inuit-page@0.2.1": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-mixins": "npm:inuit-mixins@0.2.3"
+    },
+    "npm:inuit-responsive-spacing@0.0.7": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-responsive-settings": "npm:inuit-responsive-settings@0.1.5",
+      "inuit-responsive-tools": "npm:inuit-responsive-tools@0.1.3",
+      "inuit-spacing": "npm:inuit-spacing@0.6.4"
+    },
+    "npm:inuit-responsive-tools@0.1.3": {
+      "inuit-responsive-settings": "npm:inuit-responsive-settings@0.1.5"
+    },
+    "npm:inuit-responsive-widths@0.2.2": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-responsive-settings": "npm:inuit-responsive-settings@0.1.5",
+      "inuit-responsive-tools": "npm:inuit-responsive-tools@0.1.3",
+      "inuit-tools-widths": "npm:inuit-tools-widths@0.1.4",
+      "inuit-widths": "npm:inuit-widths@0.4.2"
+    },
+    "npm:inuit-spacing@0.6.4": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0"
+    },
+    "npm:inuit-spacing@0.7.0": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0"
+    },
+    "npm:inuit-starter-kit@0.2.9": {
+      "inuit-box-sizing": "npm:inuit-box-sizing@0.2.0",
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-functions": "npm:inuit-functions@0.2.0",
+      "inuit-mixins": "npm:inuit-mixins@0.2.3",
+      "inuit-normalize": "npm:inuit-normalize@3.0.2",
+      "inuit-page": "npm:inuit-page@0.2.1"
+    },
+    "npm:inuit-tools-widths@0.1.4": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3"
+    },
+    "npm:inuit-widths@0.4.2": {
+      "inuit-defaults": "npm:inuit-defaults@0.2.3",
+      "inuit-tools-widths": "npm:inuit-tools-widths@0.1.4"
+    },
     "npm:invariant@2.2.1": {
       "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:lodash@3.10.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:lodash@4.6.1": {
