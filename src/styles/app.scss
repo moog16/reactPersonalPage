@@ -1,6 +1,7 @@
 // framework styles
 @import "jspm:inuit-defaults/settings.defaults";
 @import "jspm:inuit-responsive-settings/settings.responsive";
+@import "settings.app";
 @import "settings.inuit-spacings";
 @import "settings.icons";
 @import "settings.colors";
@@ -23,6 +24,7 @@
 @import "jspm:inuit-layout/objects.layout";
 @import "jspm:inuit-buttons/objects.buttons";
 @import "objects.circle.scss";
+@import "objects.flex.scss";
 
 @import "components.backgrounds.scss";
 @import "components.box.scss";

@@ -7,8 +7,9 @@ div[class^="cover--"],
 }
 
 .cover__header {
+  min-width: $pageMinWidth;
   margin-top: 30vh;
-  @extend .bg--color-opaque--white-7;
+  color: white;
   @include vendor(transition, position 1s ease);
 
   h1 {
@@ -21,6 +22,7 @@ div[class^="cover--"],
   &.fixed {
     margin-top: 0;
     @extend .bg--color-white;
+    color: black;
 
     h1 {
       font-size: 2rem;
@@ -47,6 +49,7 @@ div[class^="cover--"],
   background-image: url('../img/explorer.jpg');
   @extend %cover-base;
   @extend %cover-background;
+  @include vendor(filter, grayscale(75%) brightness(0.9));
 }
 
 .cover--blue-door {

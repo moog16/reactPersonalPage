@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { connect, Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers/reducers';
-import fetch from 'fetch';
+import fetch from 'whatwg-fetch';
 
 const middleware = [thunk];
 const store = createStore(

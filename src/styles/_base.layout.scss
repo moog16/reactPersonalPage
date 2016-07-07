@@ -3,7 +3,9 @@ body {
   font-family: 'JosefinSans', Times, serif;
   font-weight: 500;
   font-size: 16px;
+  min-width: $pageMinWidth;
 }
+
 body {
   position: relative;
 }
@@ -15,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 a {

@@ -16,6 +16,11 @@ class BlueDoor extends React.Component {
   render() {
     const blog = this.props.dinnerBlog;
     const posts = blog && blog.size && blog.get('posts');
+
+    if(!posts) {
+      return null;
+    }
+    
     return (
       <div className='full-page'>
         <div className='cover--blue-door'>
