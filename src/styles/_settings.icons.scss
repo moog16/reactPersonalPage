@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cloud-download:before {
+    content: "\e907";
+}
 .icon-mail:before {
     content: "\e900";
 }

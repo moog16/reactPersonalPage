@@ -52,8 +52,12 @@ div[class^="cover--"],
   @include vendor(filter, grayscale(75%) brightness(0.9));
 }
 
-.cover--blue-door {
-  background-image: url('../img/blue_door.jpg');
+// .cover--blue-door {
+//   background-image: url('../img/blue_door.jpg');
+// }
+
+.cover--eggs {
+  background-image: url('../img/eggs.jpg');
 }
 
 .cover--bridge {

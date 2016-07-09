@@ -1,7 +1,7 @@
 import React from 'react';
 import Splash from './Splash';
 import AboutMe from './AboutMe';
-import BlueDoor from './BlueDoor';
+import CookingBlog from './CookingBlog';
 import Resume from './Resume';
 import VideoFeed from './VideoFeed';
 import Waypoint from 'react-waypoint';
@@ -27,29 +27,27 @@ class Home extends React.Component {
 
     const { videos } = this.props;
 
-    return  (
-      <div>
-        <div className={backgroundClasses}></div>
-        <Splash />
-        <AboutMe />
-        <BlueDoor
-          fetchDinnerBlog={this.props.fetchDinnerBlog}
-          dinnerBlog={this.props.dinnerBlog} />
-        <Resume/>
-        <Waypoint
-          onEnter={this._scrollVideoFeedEnter.bind(this)}
-          onLeave={this._scrollVideoFeedLeave.bind(this)}
-          threshold={1.5} />
-        <VideoFeed
-          fetchYoutubeVideos={this.props.fetchYoutubeVideos}
-          videos={videos}  />
-        <div className='footer'>
-          <h6>
-            Proudly developing since 2009
-          </h6>
-        </div>
+    return  <div>
+      <div className={backgroundClasses}></div>
+      <Splash />
+      <AboutMe />
+      <CookingBlog
+        fetchDinnerBlog={this.props.fetchDinnerBlog}
+        dinnerBlog={this.props.dinnerBlog} />
+      <Resume/>
+      <Waypoint
+        onEnter={this._scrollVideoFeedEnter.bind(this)}
+        onLeave={this._scrollVideoFeedLeave.bind(this)}
+        threshold={1.5} />
+      <VideoFeed
+        fetchYoutubeVideos={this.props.fetchYoutubeVideos}
+        videos={videos}  />
+      <div className='footer'>
+        <h6>
+          Proudly developing since 2009
+        </h6>
       </div>
-    )
+    </div>
   }
 
   _scrollVideoFeedEnter() {

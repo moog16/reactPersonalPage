@@ -24,6 +24,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-cloud-download:before {
+  content: "\e907"; }
+
 .icon-mail:before {
   content: "\e900"; }
 
@@ -48,6 +51,11 @@
 @font-face {
   font-family: "MissionScript";
   src: url("../fonts/MissionScript/Mission-Script.otf") format("opentype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Lora';
+  src: url("../fonts/Lora/Lora-Regular.ttg") format("truetype");
   font-weight: 400; }
 
 @font-face {
@@ -536,9 +544,19 @@ body {
 body {
   position: relative; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: "MissionScript", Arial, serif;
   font-weight: 400; }
+
+h3, h4, h5, h6 {
+  font-family: 'JosefinSans', Times, serif;
+  font-weight: 600; }
+
+h1 {
+  font-size: 4rem; }
+  @media screen and (max-width: 44.9375em) {
+    h1 {
+      font-size: 3rem; } }
 
 .section {
   max-width: 900px;
@@ -547,7 +565,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
   cursor: pointer;
   text-decoration: none;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  color: #17607D; }
 
 /*------------------------------------*    #BOX
 \*------------------------------------*/
@@ -713,8 +732,8 @@ div[class^="cover--"],
   -o-filter: grayscale(75%) brightness(0.9);
   filter: grayscale(75%) brightness(0.9); }
 
-.cover--blue-door {
-  background-image: url("../img/blue_door.jpg"); }
+.cover--eggs {
+  background-image: url("../img/eggs.jpg"); }
 
 .cover--bridge {
   background-image: url("../img/ggb.jpg"); }
@@ -755,15 +774,16 @@ div[class^="cover--"],
   border-bottom-style: dashed; }
 
 .content-row {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.85);
   -webkit-transition: background-color 0.4s;
   -moz-transition: background-color 0.4s;
   -ms-transition: background-color 0.4s;
   -o-transition: background-color 0.4s;
-  transition: background-color 0.4s; }
+  transition: background-color 0.4s;
+  min-height: 160px; }
   .content-row:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.9); }
+    background-color: white; }
 
 .footer {
   height: 65px;
@@ -783,7 +803,7 @@ div[class^="cover--"],
   width: 343px; }
 
 .resume-image {
-  max-width: 300px; }
+  max-width: 150px; }
 
 .youtube-video {
   height: 100px;
