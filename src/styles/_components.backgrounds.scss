@@ -1,7 +1,6 @@
 div[class^="cover--"],
 %cover-base {
   @include vendor(background-size, cover);
-  height: 100vh;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -47,21 +46,20 @@ div[class^="cover--"],
 
 .cover--explorer {
   background-image: url('../img/explorer.jpg');
+  height: 100vh;
   @extend %cover-base;
   @extend %cover-background;
   @include vendor(filter, grayscale(75%) brightness(0.9));
 }
 
-// .cover--blue-door {
-//   background-image: url('../img/blue_door.jpg');
-// }
-
 .cover--eggs {
+  @extend %cover-base;
   background-image: url('../img/eggs.jpg');
 }
 
 .cover--bridge {
   background-image: url('../img/ggb.jpg');
+  height: 100vh;
   @extend %cover-base;
   @extend %cover-background;
 }

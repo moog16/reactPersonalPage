@@ -685,13 +685,13 @@ a {
 
 div[class^="cover--"],
 .cover--explorer,
+.cover--eggs,
 .cover--bridge {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
 
@@ -726,6 +726,7 @@ div[class^="cover--"],
 
 .cover--explorer {
   background-image: url("../img/explorer.jpg");
+  height: 100vh;
   -webkit-filter: grayscale(75%) brightness(0.9);
   -moz-filter: grayscale(75%) brightness(0.9);
   -ms-filter: grayscale(75%) brightness(0.9);
@@ -736,7 +737,8 @@ div[class^="cover--"],
   background-image: url("../img/eggs.jpg"); }
 
 .cover--bridge {
-  background-image: url("../img/ggb.jpg"); }
+  background-image: url("../img/ggb.jpg");
+  height: 100vh; }
 
 /******** generic background classes ********/
 .bg--color-blue {

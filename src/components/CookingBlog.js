@@ -34,21 +34,19 @@ class CookingBlog extends React.Component {
     if(!posts || !posts.size) {
       return null;
     }
-    return <div className='full-page'>
-      <div className='cover--eggs'>
-        <div className='section half-page'>
-          <div className='u-p u-pt++'>
-            <h1 className="u-mv0 text--color-white">
-              I love to cook!
-            </h1>
-            <h4 className='u-m0'>
-              <a className='u-p-- text--color-white ' href={blog.getIn(['blog', 'url'])}>
-                <i className='icon-tumblr'></i>  { blog.getIn(['blog', 'title']) }
-              </a>
-            </h4>
-            <div className='layout layout--small'>
-              { posts.map(post => this.renderBlogEntry(post), this) }
-            </div>
+    return <div className='half-page cover--eggs'>
+      <div className='section'>
+        <div className='u-p u-pv++'>
+          <h1 className="u-mv0 text--color-white">
+            I love to cook!
+          </h1>
+          <h4 className='u-m0'>
+            <a className='u-p-- text--color-white ' href={blog.getIn(['blog', 'url'])}>
+              <i className='icon-tumblr'></i>  { blog.getIn(['blog', 'title']) }
+            </a>
+          </h4>
+          <div className='layout layout--small'>
+            { posts.map(post => this.renderBlogEntry(post), this) }
           </div>
         </div>
       </div>
