@@ -24,6 +24,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-close:before {
+  content: "\e908"; }
+
 .icon-cloud-download:before {
   content: "\e907"; }
 
@@ -617,6 +620,14 @@ a {
   width: 100%;
   /* [4] */ }
 
+/**
+     * Make the layout items fill up from the center outward.
+     */
+.layout--center {
+  text-align: center; }
+  .layout--center > .layout__item {
+    text-align: left; }
+
 /*------------------------------------*    #BUTTONS
 \*------------------------------------*/
 /**
@@ -686,7 +697,8 @@ a {
 div[class^="cover--"],
 .cover--explorer,
 .cover--eggs,
-.cover--bridge {
+.cover--bridge,
+.cover-bg {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -699,6 +711,7 @@ div[class^="cover--"],
   min-width: 320px;
   margin-top: 30vh;
   color: white;
+  z-index: 20;
   -webkit-transition: position 1s ease;
   -moz-transition: position 1s ease;
   -ms-transition: position 1s ease;
@@ -720,13 +733,12 @@ div[class^="cover--"],
 .cover__subheader.fixed {
   font-size: 1rem; }
 
-.cover--explorer, .cover--bridge {
+.cover--explorer, .cover--bridge, .cover-bg {
   position: fixed;
   z-index: -10; }
 
 .cover--explorer {
   background-image: url("../img/explorer.jpg");
-  height: 100vh;
   -webkit-filter: grayscale(75%) brightness(0.9);
   -moz-filter: grayscale(75%) brightness(0.9);
   -ms-filter: grayscale(75%) brightness(0.9);
@@ -737,8 +749,7 @@ div[class^="cover--"],
   background-image: url("../img/eggs.jpg"); }
 
 .cover--bridge {
-  background-image: url("../img/ggb.jpg");
-  height: 100vh; }
+  background-image: url("../img/ggb.jpg"); }
 
 /******** generic background classes ********/
 .bg--color-blue {
@@ -807,9 +818,66 @@ div[class^="cover--"],
 .resume-image {
   max-width: 150px; }
 
-.youtube-video {
-  height: 100px;
-  margin-bottom: -8px; }
+.video-mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -30;
+  opacity: 0;
+  transition: opacity 500ms ease; }
+  .video-mask.is-open {
+    opacity: 1;
+    z-index: 30; }
+  .video-mask .icon-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer; }
+    .video-mask .icon-close:hover {
+      color: rgba(255, 255, 255, 0.5); }
+
+.video-feed__title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white; }
+
+.video-feed__youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  max-width: 100%;
+  max-height: 100%; }
+
+.video-feed__video {
+  transition: all 500ms ease;
+  cursor: pointer;
+  text-align: center; }
+  .video-feed__video img {
+    max-height: 100%;
+    max-width: 100%;
+    position: static; }
+  .video-feed__video img, .video-feed__video span {
+    opacity: 1;
+    transition: opacity 500ms ease; }
+  .video-feed__video:hover {
+    -webkit-filter: brightness(120%);
+    -moz-filter: brightness(120%);
+    -ms-filter: brightness(120%);
+    -o-filter: brightness(120%);
+    filter: brightness(120%); }
+  .video-feed__video.is-open img, .video-feed__video.is-open span {
+    position: absolute;
+    opacity: 0; }
+  .video-feed__video.is-open .video-feed__youtube-video {
+    position: relative;
+    z-index: 20; }
 
 /*------------------------------------*    #WIDTHS
 \*------------------------------------*/

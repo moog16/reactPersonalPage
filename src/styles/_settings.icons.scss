@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+    content: "\e908";
+}
 .icon-cloud-download:before {
     content: "\e907";
 }

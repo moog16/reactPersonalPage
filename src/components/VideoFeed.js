@@ -1,47 +1,89 @@
 import React from 'react';
+import classnames from 'classnames';
 import { List } from 'immutable';
+import Masonry from 'masonry-layout';
+import VideoThumbnailPlayer from './VideoThumbnailPlayer';
 
 export default class VideoFeed extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { masonry: null, currentVideo: null };
+  }
+
   componentWillMount() {
     this.props.fetchYoutubeVideos();
   }
 
+  componentDidMount() {
+    this.initMasonry();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.initMasonry(nextProps);
+  }
+
+  initMasonry(videos = this.props.videos) {
+    const { masonry } = this.state;
+    if(!videos.size || !List.isList(videos) && !masonry) {
+      return;
+    }
+
+    const grid = document.querySelector('.video-feed');
+    const msnry = new Masonry(grid, {
+      itemSelector: '.layout__item',
+      columnWidth: '.layout__item'
+    });
+    this.setState({ masonry: msnry });
+  }
+
+  hasLoadedVideo() {
+    const { masonry } = this.state;
+    masonry && masonry.layout();
+  }
+
+  setCurrentVideo(currentVideo) {
+    this.setState({ currentVideo });
+  }
+
+  closeVideos() {
+    const { currentVideo } = this.state;
+    if(!currentVideo) { return; }
+    currentVideo.closeVideo();
+    this.setCurrentVideo(null);
+  }
+
   render() {
     const { videos } = this.props;
+    const { currentVideo } = this.state;
     if(!videos.size || !List.isList(videos)) {
       return null;
     }
 
-    return <div className='u-p section'>
+    return <div className='video-feed-component u-p section'>
       <div className='bg--color-opaque--white-5'>
         <h2 className="u-mb u-p">
           Some Videos of My Life :)
         </h2>
       </div>
-      <div>
-        {
-          videos.map(video => {
-            return <div className='content-row u-1/1 u-p u-mb' key={video.get('id')}>
-              <a target='_blank' href={video.get('url')} className='text--color-black'>
-                <div className='layout'>
-                  <div className='layout__item u-1/2'>
-                    <img src={video.get('thumbnail')} alt={video.get('title')} />
-                    {/*<iframe className="youtube-video u-1/1" frameBorder="0" src={video.get('url')}></iframe>*/}
-                  </div>
-                  <div className='layout__item u-2/3'>
-                    <span className='text--medium'>
-                      {video.get('title')}
-                    </span>
-                    <div>
-                      {video.get('description')}
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          }, this)
-        }
+      <div className='video-feed layout'>
+        { videos.map(video => <VideoThumbnailPlayer
+          video={video}
+          hasLoadedVideo={this.hasLoadedVideo.bind(this)}
+          key={video.get('id')}
+          closeVideos={this.closeVideos.bind(this)}
+          setCurrentVideo={this.setCurrentVideo.bind(this)}/>) }
       </div>
+
+      { this.renderVideoMask() }
+    </div>
+  }
+
+  renderVideoMask() {
+    const { currentVideo } = this.state;
+    const maskClasses = classnames('video-mask', {'is-open': !!currentVideo});
+    return <div className={maskClasses} onClick={this.closeVideos.bind(this)}>
+      <i className='icon-close'></i>
     </div>
   }
 };

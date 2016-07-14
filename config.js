@@ -41,6 +41,7 @@ System.config({
     "inuit-starter-kit": "npm:inuit-starter-kit@0.2.9",
     "inuit-tools-widths": "npm:inuit-tools-widths@0.1.4",
     "inuit-widths": "npm:inuit-widths@0.4.2",
+    "masonry-layout": "npm:masonry-layout@4.1.0",
     "moment": "npm:moment@2.14.1",
     "react": "npm:react@15.2.0",
     "react-dom": "npm:react-dom@15.2.0",
@@ -155,6 +156,9 @@ System.config({
       "promise": "npm:promise@7.1.1",
       "ua-parser-js": "npm:ua-parser-js@0.7.10"
     },
+    "npm:fizzy-ui-utils@2.0.2": {
+      "desandro-matches-selector": "npm:desandro-matches-selector@2.0.1"
+    },
     "npm:history@2.1.2": {
       "deep-equal": "npm:deep-equal@1.0.1",
       "invariant": "npm:invariant@2.2.1",
@@ -256,6 +260,12 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "npm:masonry-layout@4.1.0": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "get-size": "npm:get-size@2.0.2",
+      "outlayer": "npm:outlayer@2.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:node-fetch@1.5.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "encoding": "npm:encoding@0.1.12",
@@ -266,6 +276,11 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0",
       "zlib": "github:jspm/nodelibs-zlib@0.1.0"
+    },
+    "npm:outlayer@2.1.0": {
+      "ev-emitter": "npm:ev-emitter@1.0.3",
+      "fizzy-ui-utils": "npm:fizzy-ui-utils@2.0.2",
+      "get-size": "npm:get-size@2.0.2"
     },
     "npm:pako@0.2.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

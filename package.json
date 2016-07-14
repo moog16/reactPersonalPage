@@ -40,6 +40,7 @@
       "inuit-starter-kit": "npm:inuit-starter-kit@^0.2.9",
       "inuit-tools-widths": "npm:inuit-tools-widths@^0.1.4",
       "inuit-widths": "npm:inuit-widths@^0.4.2",
+      "masonry-layout": "npm:masonry-layout@^4.1.0",
       "moment": "npm:moment@^2.12.0",
       "react": "npm:react@^15.0.0",
       "react-dom": "npm:react-dom@^15.0.0",

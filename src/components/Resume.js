@@ -21,9 +21,7 @@ export default class Resume extends React.Component{
 
     return <div className="u-1/1 bg--color-white">
       <div className="u-p u-pb++ section">
-        <h1>
-          Resume
-        </h1>
+        <h1>Resume</h1>
 
         <div className="u-mb u-1/1">
           <a href="https://docs.google.com/document/d/1K2meu8QN1NByZ8YvG4kVzfF4wBAWIRs_sLFB4fiJu68/edit?usp=sharing">

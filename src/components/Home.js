@@ -14,14 +14,14 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scrollPos: props.scrollPos,
+      scrollPos: null,
       isShowingVideoFeed: false
     };
   }
 
   render() {
     const backgroundClasses = classnames(['full-page', {
-      'cover--bridge': this.state.isShowingVideoFeed,
+      'bg--color-blue cover-bg': this.state.isShowingVideoFeed,
       'cover--explorer': !this.state.isShowingVideoFeed
     }]);
 
@@ -52,9 +52,13 @@ class Home extends React.Component {
 
   _scrollVideoFeedEnter() {
     this.setState({isShowingVideoFeed: true});
+    this.setState({ scrollPos: window.scrollY });
   }
 
   _scrollVideoFeedLeave() {
+    if(this.state.scrollPos < window.scrollY) {
+      return;
+    }
     this.setState({isShowingVideoFeed: false});
   }
 };

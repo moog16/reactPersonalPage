@@ -9,6 +9,7 @@ div[class^="cover--"],
   min-width: $pageMinWidth;
   margin-top: 30vh;
   color: white;
+  z-index: 20;
   @include vendor(transition, position 1s ease);
 
   h1 {
@@ -46,7 +47,6 @@ div[class^="cover--"],
 
 .cover--explorer {
   background-image: url('../img/explorer.jpg');
-  height: 100vh;
   @extend %cover-base;
   @extend %cover-background;
   @include vendor(filter, grayscale(75%) brightness(0.9));
@@ -59,13 +59,15 @@ div[class^="cover--"],
 
 .cover--bridge {
   background-image: url('../img/ggb.jpg');
-  height: 100vh;
+  @extend %cover-base;
+  @extend %cover-background;
+}
+.cover-bg {
   @extend %cover-base;
   @extend %cover-background;
 }
 
 /******** generic background classes ********/
-
 .bg--color-blue {
   background-color: $blue;
 }
