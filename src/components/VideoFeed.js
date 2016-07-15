@@ -61,9 +61,11 @@ export default class VideoFeed extends React.Component {
     }
 
     return <div className='video-feed-component u-p section'>
-      <h1 className="u-mb u-p text--color-white">
-        Some Videos of My Life :)
-      </h1>
+      <div className='bg--color-opaque--white-5'>
+        <h2 className="u-mb u-p">
+          Some Videos of My Life :)
+        </h2>
+      </div>
       <div className='video-feed layout'>
         { videos.map(video => <VideoThumbnailPlayer
           video={video}
