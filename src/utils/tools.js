@@ -6,3 +6,11 @@ export function getWinSize() {
     height: height
   };
 }
+
+export function disableScroll() {
+  document.querySelector('html').style.overflow = 'hidden';
+}
+
+export function enableScroll() {
+  document.querySelector('html').style.overflow = '';
+}

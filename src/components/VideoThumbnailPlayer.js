@@ -1,21 +1,37 @@
 import React from 'react';
 import classnames from 'classnames';
 import { List } from 'immutable';
-import { getWinSize } from '../utils/tools';
+import { getWinSize, disableScroll, enableScroll } from '../utils/tools';
+import YouTubeIframeLoader from 'youtube-iframe';
 
 export default class VideoThumbnailPlayer extends React.Component {
   videoEl: null
 
   constructor(props) {
     super(props);
-    this.state = { isOpen : false };
+    this.state = { isOpen : false, player: null };
+  }
+
+  componentDidMount() {
+    const { video } = this.props;
+    const height = parseInt(video.getIn(['thumbnail', 'height']));
+    const width = parseInt(video.getIn(['thumbnail', 'width']));
+    const videoId = video.get('id');
+
+    YouTubeIframeLoader.load(YT => {
+    	const player = new YT.Player(videoId, { height, width, videoId });
+      this.setState({ player });
+      this.videoEl.querySelector('img').style.minHeight = `${height}px`;
+    }.bind(this));
   }
 
   closeVideo() {
     const { setCurrentVideo } = this.props;
-
+    const { player } = this.state;
     this.setState({ isOpen: false });
     setCurrentVideo(null);
+    player.stopVideo();
+    enableScroll();
     return this.resetVideoStyles();
   }
 
@@ -33,6 +49,7 @@ export default class VideoThumbnailPlayer extends React.Component {
     const imgWidth = imgEl.offsetWidth;
     const scale = this.getScale(imgHeight, imgWidth);
     const { top, left } = this.getNewTopAndLeft(imgHeight, imgWidth);
+    disableScroll();
 
     this.setVideoStyles(top, left, scale);
   }
@@ -57,7 +74,7 @@ export default class VideoThumbnailPlayer extends React.Component {
 
   getNewTopAndLeft(imgHeight, imgWidth) {
     const { videoEl } = this;
-    const element = videoEl.querySelector('iframe');
+    const element = videoEl.querySelector('img');
 
     const { height, width } = getWinSize();
     const currentTop = videoEl.offsetTop;
@@ -82,8 +99,6 @@ export default class VideoThumbnailPlayer extends React.Component {
   render() {
     const { video, hasLoadedVideo } = this.props;
     const { isOpen } = this.state;
-    const height = parseInt(video.getIn(['thumbnail', 'height']));
-    const width = parseInt(video.getIn(['thumbnail', 'width']));
     const videoClasses = classnames('video-feed__video layout__item u-1/3 u-1/2-lap u-1/1-palm', {'is-open': isOpen});
 
     return <div className={videoClasses} ref={videoEl => this.videoEl = videoEl}>
@@ -91,11 +106,7 @@ export default class VideoThumbnailPlayer extends React.Component {
           <img src={video.getIn(['thumbnail', 'url'])}
             alt={video.get('title')}
             onLoad={hasLoadedVideo} />
-          <iframe frameBorder='0'
-            src={video.get('url')}
-            className='video-feed__youtube-video'
-            height={height}
-            width={width} />
+          <div id={video.get('id')} className='video-feed__youtube-video'></div>
           <span className='video-feed__title text--medium'>
           {video.get('title')}
         </span>

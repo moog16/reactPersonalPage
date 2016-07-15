@@ -51,6 +51,7 @@ System.config({
     "redux": "npm:redux@3.5.2",
     "redux-thunk": "npm:redux-thunk@2.1.0",
     "whatwg-fetch": "npm:whatwg-fetch@0.11.1",
+    "youtube-iframe": "npm:youtube-iframe@1.0.2",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
